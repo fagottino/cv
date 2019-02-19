@@ -6,7 +6,7 @@ export class Cv {
   nameSurname: string;
   description: string;
   website: string;
-  sociallink: string;
+  socialLink: string;
   workExperiences: WorkExperiences[];
   education: Education[];
   knowledge: Knowledge[];

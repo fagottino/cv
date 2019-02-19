@@ -159,9 +159,19 @@
   "interestsAndHobbies": [
     {
       "title": "photography",
+      "icon": ""
+    },
+    {
       "title": "reading",
+      "icon": ""
+    },
+    {
       "title": "motorcycling",
-      "title": "travel"
+      "icon": ""
+    },
+    {
+      "title": "travel",
+      "icon": ""
     }
   ],
   "portfolio": [
@@ -174,7 +184,8 @@
   "contacts": [
     {
       "title": "",
-      "level": ""
+      "action": "",
+      "icon": ""
     }
   ]
 }

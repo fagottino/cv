@@ -10,11 +10,11 @@ export class ReadJsonService {
 
   constructor(private http: HttpClient) { }
 
-  configUrl = 'assets/data.json';
+  cvDataUrl = 'assets/data.json';
 
-  getConfigResponse(): Observable<HttpResponse<Cv>> {
+  retrieveData(): Observable<HttpResponse<Cv>> {
     return this.http.get<Cv>(
-      this.configUrl, { observe: 'response' });
+      this.cvDataUrl, { observe: 'response' });
   }
 }
 
