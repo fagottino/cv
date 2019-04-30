@@ -1,6 +1,6 @@
 export class Education {
   institute: string;
-  cityOfCompany: string;
+  cityOfInstitute: string;
   dateFromTo: string;
   title: string;
   description: string;

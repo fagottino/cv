@@ -1,25 +1,18 @@
-<div class="wrap">
-  <div class="content">
+<div class="wrap" *ngFor="let page of pages; let i = index; trackBy:newPage">
+  <div class="content" id='con'>
     <div class="row">
       <div class="span6">
         <h1 class="logo">
-          Antonio Orlando
+          {{cv?.name.concat(' ', cv?.surname)}}
           <small>
-            Programmer
-            <em>
-              &amp;
-            </em>
-            Web Developer
+            {{cv?.description}}
           </small>
         </h1>
       </div>
       <div class="span3">
         <div class="social-header hide-on-zoom">
-          <a href="https://github.com/fagottino">
-            <i class="fa fa-github fa-2x" aria-hidden="true"></i>
-          </a>
-          <a href="https://twitter.com/fagottino">
-            <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+          <a *ngFor="let social of cv?.socialLink" href="{{social.link}}">
+              <i class="fa fa-{{social.icon}} fa-2x" aria-hidden="true"></i>
           </a>
         </div>
       </div>
@@ -27,33 +20,19 @@
         <ul class="contact-info hide-on-zoom fixed">
           <li>
             E-mail:
-            me@orlandoantonio.it
+            {{cv?.email}}
           </li>
           <li>
             Website:
             <a href="#">
-              <a href="http://www.orlandoantonio.it">orlandoantonio.it</a>
+              <a href="http://www.{{cv?.website}}">{{cv?.website}}</a>
             </a>
           </li>
-          <li>
-            Telegram:
+          <li *ngFor="let contact of cv?.contactLink">
+              {{contact.name}}
             <strong>
-              <a href="https://telegram.me/fagottino">Antonio Orlando</a>
+              <a href="{{contact.link}}">{{contact.label}}</a>
             </strong>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="row social" style="visibility:hidden;">
-      <div class="contact-social-footer">
-        <ul>
-          <li>
-            <a href="https://github.com/fagottino"><i class="fa fa-github fa-2x" aria-hidden="true"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com/fagottino"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
-            </a>
           </li>
         </ul>
       </div>
@@ -66,72 +45,24 @@
         </h3>
       </div>
     </div>
-    <div class="row cv-item">
+    <div class="row cv-item" *ngFor="let workExperience of cv?.workExperiences">
       <div class="span3 cv-item-description">
         <h6>
-          Timesys srl
+          {{workExperience.company}}
         </h6>
         <p>
-          Cassino (FR)<br />
+          {{workExperience.city}}<br />
           <span class="mute">
-            02/2011 - 12/2013
+            {{workExperience.dateFromTo}}
           </span>
         </p>
       </div>
       <div class="span9 cv-item-details">
         <h4>
-          SW/WEB Developer
+          {{workExperience.title}}
         </h4>
         <p class="last">
-          Manutenzione su funzioni esistenti ed estensione del SW baropodometrico MTX7;<br />
-          Creazione di applicativi Web;
-          Manutenzione su progetti Web già esistenti;
-          Sviluppo di WebServices SOAP
-        </p>
-      </div>
-    </div>
-    <div class="row cv-item">
-      <div class="span3 cv-item-description">
-        <h6>
-          Ricci SAS
-        </h6>
-        <p>
-          Venafro (IS)<br />
-          <span class="mute">
-                        05/2010 - 01/2011
-                    </span>
-        </p>
-      </div>
-      <div class="span9 cv-item-details">
-        <h4>
-          Web developer
-        </h4>
-        <p class="last">
-          Installazione, configurazione e personalizzazione di Prestashop per la vendita online.<br />
-          Utilizzando il CMS open-source PrestaShop ho configurato e messo online l'intero e-commerce.
-        </p>
-      </div>
-    </div>
-    <div class="row cv-item">
-      <div class="span3 cv-item-description">
-        <h6>
-          CercAziende.it spa
-        </h6>
-        <p>
-          Venafro (IS)<br />
-          <span class="mute">
-                        09/2009 - 04/2010
-                    </span>
-        </p>
-      </div>
-      <div class="span9 cv-item-details">
-        <h4>
-          Web developer
-        </h4>
-        <p class="last">
-          Architettura e sviluppo di piattaforme e-commerce, programmazione lato server e client orientata alle web application. <br />
-          Progettazione e gestione di database relazionali. Collaborazione continuativa in un team di sviluppatori.<br />
-          Gestione, creazione di moduli aggiuntivi, modifica dei template e dei contenuti degli e-commerce, dei CMS aziendali e di vari siti web dei clienti. <br />
+          {{workExperience.description}}
         </p>
       </div>
     </div>
@@ -143,373 +74,26 @@
         </h3>
       </div>
     </div>
-    <div class="row cv-item">
-      <div class="span3 cv-item-description">
-        <h6>
-          Unimol
-        </h6>
-        <p>
-          Pesche (IS)<br />
-          <span class="mute">
-                        10/2014 - Attuale
-                    </span>
-        </p>
-      </div>
-      <div class="span9 cv-item-details">
-        <h4>
-          Unimol
-        </h4>
-        <p class="last">
-          Corso di laurea in Informatica presso Università degli Studi del Molise
-        </p>
-      </div>
+    <div class="row cv-item" *ngFor="let education of cv?.education; trackBy:newElement">
+        <div class="span3 cv-item-description">
+          <h6>
+            {{education.institute}}
+          </h6>
+          <p>
+            {{education.cityOfInstitute}}<br />
+            <span class="mute">
+              {{education.dateFromTo}}
+            </span>
+          </p>
+        </div>
+        <div class="span9 cv-item-details">
+          <h4>
+            {{education.title}}
+          </h4>
+          <p class="last">
+            {{education.description}}
+          </p>
+        </div>
     </div>
-    <div class="row cv-item">
-      <div class="span3 cv-item-description">
-        <h6>
-          Praxis formazione
-        </h6>
-        <p>
-          Isernia (IS)<br />
-          <span class="mute">
-            06/2008 - 12/2008
-          </span>
-        </p>
-      </div>
-      <div class="span9 cv-item-details">
-        <h4>
-          Corso Web Development
-        </h4>
-        <p class="last">
-          Capacit&agrave; di configurazione, progettazione e creazione di un database MySQL, Access;
-          <br />Capacit&agrave; di progettare e realizzare siti Web con linguaggio ServerSide di scripting Open Source quali PHP ed ASP;
-          <br />Creazione di elementi interattivi su siti web;
-          <br />Capacit&agrave; di creare elementi animati per il web;
-          <br />Progettazione di pagine web HTML - XHTML;
-          <br />Capacità di configurare un sistema Client/Server;
-        </p>
-      </div>
-    </div>
-
-
-
-
-
-    <!--<div class="row cv-item">-->
-      <!--<div class="span3 cv-item-description">-->
-        <!--<h6>-->
-          <!--Praxis formazione-->
-        <!--</h6>-->
-        <!--<p>-->
-          <!--Isernia (IS)<br />-->
-          <!--<span class="mute">-->
-                        <!--06/2008 - 12/2008-->
-                    <!--</span>-->
-        <!--</p>-->
-      <!--</div>-->
-      <!--<div class="span9 cv-item-details">-->
-        <!--<h4>-->
-          <!--Corso Web Development-->
-        <!--</h4>-->
-        <!--<p class="last">-->
-          <!--Capacit&agrave; di configurazione, progettazione e creazione di un database MySQL, Access;-->
-          <!--<br />Capacit&agrave; di progettare e realizzare siti Web con linguaggio ServerSide di scripting Open Source quali PHP ed ASP;-->
-          <!--<br />Creazione di elementi interattivi su siti web;-->
-          <!--<br />Capacit&agrave; di creare elementi animati per il web;-->
-          <!--<br />Progettazione di pagine web HTML - XHTML;-->
-          <!--<br />Capacità di configurare un sistema Client/Server;-->
-        <!--</p>-->
-      <!--</div>-->
-    <!--</div>-->
-    <!--<div class="row cv-item">-->
-      <!--<div class="span3 cv-item-description">-->
-        <!--<h6>-->
-          <!--Praxis formazione-->
-        <!--</h6>-->
-        <!--<p>-->
-          <!--Isernia (IS)<br />-->
-          <!--<span class="mute">-->
-                        <!--06/2008 - 12/2008-->
-                    <!--</span>-->
-        <!--</p>-->
-      <!--</div>-->
-      <!--<div class="span9 cv-item-details">-->
-        <!--<h4>-->
-          <!--Corso Web Development-->
-        <!--</h4>-->
-        <!--<p class="last">-->
-          <!--Capacit&agrave; di configurazione, progettazione e creazione di un database MySQL, Access;-->
-          <!--<br />Capacit&agrave; di progettare e realizzare siti Web con linguaggio ServerSide di scripting Open Source quali PHP ed ASP;-->
-          <!--<br />Creazione di elementi interattivi su siti web;-->
-          <!--<br />Capacit&agrave; di creare elementi animati per il web;-->
-          <!--<br />Progettazione di pagine web HTML - XHTML;-->
-          <!--<br />Capacità di configurare un sistema Client/Server;-->
-        <!--</p>-->
-      <!--</div>-->
-    <!--</div>-->
-    <!--<div class="row cv-item">-->
-      <!--<div class="span3 cv-item-description">-->
-        <!--<h6>-->
-          <!--Praxis formazione-->
-        <!--</h6>-->
-        <!--<p>-->
-          <!--Isernia (IS)<br />-->
-          <!--<span class="mute">-->
-                        <!--06/2008 - 12/2008-->
-                    <!--</span>-->
-        <!--</p>-->
-      <!--</div>-->
-      <!--<div class="span9 cv-item-details">-->
-        <!--<h4>-->
-          <!--Corso Web Development-->
-        <!--</h4>-->
-        <!--<p class="last">-->
-          <!--Capacit&agrave; di configurazione, progettazione e creazione di un database MySQL, Access;-->
-          <!--<br />Capacit&agrave; di progettare e realizzare siti Web con linguaggio ServerSide di scripting Open Source quali PHP ed ASP;-->
-          <!--<br />Creazione di elementi interattivi su siti web;-->
-          <!--<br />Capacit&agrave; di creare elementi animati per il web;-->
-          <!--<br />Progettazione di pagine web HTML - XHTML;-->
-          <!--<br />Capacità di configurare un sistema Client/Server;-->
-        <!--</p>-->
-      <!--</div>-->
-    <!--</div>-->
-    <!--<div class="row cv-item">-->
-      <!--<div class="span3 cv-item-description">-->
-        <!--<h6>-->
-          <!--Praxis formazione-->
-        <!--</h6>-->
-        <!--<p>-->
-          <!--Isernia (IS)<br />-->
-          <!--<span class="mute">-->
-                        <!--06/2008 - 12/2008-->
-                    <!--</span>-->
-        <!--</p>-->
-      <!--</div>-->
-      <!--<div class="span9 cv-item-details">-->
-        <!--<h4>-->
-          <!--Corso Web Development-->
-        <!--</h4>-->
-        <!--<p class="last">-->
-          <!--Capacit&agrave; di configurazione, progettazione e creazione di un database MySQL, Access;-->
-          <!--<br />Capacit&agrave; di progettare e realizzare siti Web con linguaggio ServerSide di scripting Open Source quali PHP ed ASP;-->
-          <!--<br />Creazione di elementi interattivi su siti web;-->
-          <!--<br />Capacit&agrave; di creare elementi animati per il web;-->
-          <!--<br />Progettazione di pagine web HTML - XHTML;-->
-          <!--<br />Capacità di configurare un sistema Client/Server;-->
-        <!--</p>-->
-      <!--</div>-->
-    <!--</div>-->
-    <!--<div class="row cv-item">-->
-      <!--<div class="span3 cv-item-description">-->
-        <!--<h6>-->
-          <!--Praxis formazione-->
-        <!--</h6>-->
-        <!--<p>-->
-          <!--Isernia (IS)<br />-->
-          <!--<span class="mute">-->
-                        <!--06/2008 - 12/2008-->
-                    <!--</span>-->
-        <!--</p>-->
-      <!--</div>-->
-      <!--<div class="span9 cv-item-details">-->
-        <!--<h4>-->
-          <!--Corso Web Development-->
-        <!--</h4>-->
-        <!--<p class="last">-->
-          <!--Capacit&agrave; di configurazione, progettazione e creazione di un database MySQL, Access;-->
-          <!--<br />Capacit&agrave; di progettare e realizzare siti Web con linguaggio ServerSide di scripting Open Source quali PHP ed ASP;-->
-          <!--<br />Creazione di elementi interattivi su siti web;-->
-          <!--<br />Capacit&agrave; di creare elementi animati per il web;-->
-          <!--<br />Progettazione di pagine web HTML - XHTML;-->
-          <!--<br />Capacità di configurare un sistema Client/Server;-->
-        <!--</p>-->
-      <!--</div>-->
-    <!--</div>-->
-    <!--<div class="row cv-item">-->
-      <!--<div class="span3 cv-item-description">-->
-        <!--<h6>-->
-          <!--Praxis formazione-->
-        <!--</h6>-->
-        <!--<p>-->
-          <!--Isernia (IS)<br />-->
-          <!--<span class="mute">-->
-                        <!--06/2008 - 12/2008-->
-                    <!--</span>-->
-        <!--</p>-->
-      <!--</div>-->
-      <!--<div class="span9 cv-item-details">-->
-        <!--<h4>-->
-          <!--Corso Web Development-->
-        <!--</h4>-->
-        <!--<p class="last">-->
-          <!--Capacit&agrave; di configurazione, progettazione e creazione di un database MySQL, Access;-->
-          <!--<br />Capacit&agrave; di progettare e realizzare siti Web con linguaggio ServerSide di scripting Open Source quali PHP ed ASP;-->
-          <!--<br />Creazione di elementi interattivi su siti web;-->
-          <!--<br />Capacit&agrave; di creare elementi animati per il web;-->
-          <!--<br />Progettazione di pagine web HTML - XHTML;-->
-          <!--<br />Capacità di configurare un sistema Client/Server;-->
-        <!--</p>-->
-      <!--</div>-->
-    <!--</div>-->
-    <!--<div class="row cv-item">-->
-      <!--<div class="span3 cv-item-description">-->
-        <!--<h6>-->
-          <!--Praxis formazione-->
-        <!--</h6>-->
-        <!--<p>-->
-          <!--Isernia (IS)<br />-->
-          <!--<span class="mute">-->
-                        <!--06/2008 - 12/2008-->
-                    <!--</span>-->
-        <!--</p>-->
-      <!--</div>-->
-      <!--<div class="span9 cv-item-details">-->
-        <!--<h4>-->
-          <!--Corso Web Development-->
-        <!--</h4>-->
-        <!--<p class="last">-->
-          <!--Capacit&agrave; di configurazione, progettazione e creazione di un database MySQL, Access;-->
-          <!--<br />Capacit&agrave; di progettare e realizzare siti Web con linguaggio ServerSide di scripting Open Source quali PHP ed ASP;-->
-          <!--<br />Creazione di elementi interattivi su siti web;-->
-          <!--<br />Capacit&agrave; di creare elementi animati per il web;-->
-          <!--<br />Progettazione di pagine web HTML - XHTML;-->
-          <!--<br />Capacità di configurare un sistema Client/Server;-->
-        <!--</p>-->
-      <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="row cv-item">-->
-      <!--<div class="span3 cv-item-description">-->
-        <!--<h6>-->
-          <!--Praxis formazione-->
-        <!--</h6>-->
-        <!--<p>-->
-          <!--Isernia (IS)<br />-->
-          <!--<span class="mute">-->
-                        <!--06/2008 - 12/2008-->
-                    <!--</span>-->
-        <!--</p>-->
-      <!--</div>-->
-      <!--<div class="span9 cv-item-details">-->
-        <!--<h4>-->
-          <!--Corso Web Development-->
-        <!--</h4>-->
-        <!--<p class="last">-->
-          <!--Capacit&agrave; di configurazione, progettazione e creazione di un database MySQL, Access;-->
-          <!--<br />Capacit&agrave; di progettare e realizzare siti Web con linguaggio ServerSide di scripting Open Source quali PHP ed ASP;-->
-          <!--<br />Creazione di elementi interattivi su siti web;-->
-          <!--<br />Capacit&agrave; di creare elementi animati per il web;-->
-          <!--<br />Progettazione di pagine web HTML - XHTML;-->
-          <!--<br />Capacità di configurare un sistema Client/Server;-->
-        <!--</p>-->
-      <!--</div>-->
-    <!--</div>-->
-    <!--<div class="row cv-item">-->
-      <!--<div class="span3 cv-item-description">-->
-        <!--<h6>-->
-          <!--Praxis formazione-->
-        <!--</h6>-->
-        <!--<p>-->
-          <!--Isernia (IS)<br />-->
-          <!--<span class="mute">-->
-                        <!--06/2008 - 12/2008-->
-                    <!--</span>-->
-        <!--</p>-->
-      <!--</div>-->
-      <!--<div class="span9 cv-item-details">-->
-        <!--<h4>-->
-          <!--Corso Web Development-->
-        <!--</h4>-->
-        <!--<p class="last">-->
-          <!--Capacit&agrave; di configurazione, progettazione e creazione di un database MySQL, Access;-->
-          <!--<br />Capacit&agrave; di progettare e realizzare siti Web con linguaggio ServerSide di scripting Open Source quali PHP ed ASP;-->
-          <!--<br />Creazione di elementi interattivi su siti web;-->
-          <!--<br />Capacit&agrave; di creare elementi animati per il web;-->
-          <!--<br />Progettazione di pagine web HTML - XHTML;-->
-          <!--<br />Capacità di configurare un sistema Client/Server;-->
-        <!--</p>-->
-      <!--</div>-->
-    <!--</div>-->
-    <!--<div class="row cv-item">-->
-      <!--<div class="span3 cv-item-description">-->
-        <!--<h6>-->
-          <!--Praxis formazione-->
-        <!--</h6>-->
-        <!--<p>-->
-          <!--Isernia (IS)<br />-->
-          <!--<span class="mute">-->
-                        <!--06/2008 - 12/2008-->
-                    <!--</span>-->
-        <!--</p>-->
-      <!--</div>-->
-      <!--<div class="span9 cv-item-details">-->
-        <!--<h4>-->
-          <!--Corso Web Development-->
-        <!--</h4>-->
-        <!--<p class="last">-->
-          <!--Capacit&agrave; di configurazione, progettazione e creazione di un database MySQL, Access;-->
-          <!--<br />Capacit&agrave; di progettare e realizzare siti Web con linguaggio ServerSide di scripting Open Source quali PHP ed ASP;-->
-          <!--<br />Creazione di elementi interattivi su siti web;-->
-          <!--<br />Capacit&agrave; di creare elementi animati per il web;-->
-          <!--<br />Progettazione di pagine web HTML - XHTML;-->
-          <!--<br />Capacità di configurare un sistema Client/Server;-->
-        <!--</p>-->
-      <!--</div>-->
-    <!--</div>-->
-    <!--<div class="row cv-item">-->
-      <!--<div class="span3 cv-item-description">-->
-        <!--<h6>-->
-          <!--Praxis formazione-->
-        <!--</h6>-->
-        <!--<p>-->
-          <!--Isernia (IS)<br />-->
-          <!--<span class="mute">-->
-                        <!--06/2008 - 12/2008-->
-                    <!--</span>-->
-        <!--</p>-->
-      <!--</div>-->
-      <!--<div class="span9 cv-item-details">-->
-        <!--<h4>-->
-          <!--Corso Web Development-->
-        <!--</h4>-->
-        <!--<p class="last">-->
-          <!--Capacit&agrave; di configurazione, progettazione e creazione di un database MySQL, Access;-->
-          <!--<br />Capacit&agrave; di progettare e realizzare siti Web con linguaggio ServerSide di scripting Open Source quali PHP ed ASP;-->
-          <!--<br />Creazione di elementi interattivi su siti web;-->
-          <!--<br />Capacit&agrave; di creare elementi animati per il web;-->
-          <!--<br />Progettazione di pagine web HTML - XHTML;-->
-          <!--<br />Capacità di configurare un sistema Client/Server;-->
-        <!--</p>-->
-      <!--</div>-->
-    <!--</div>-->
-    <!--<div class="row cv-item">-->
-      <!--<div class="span3 cv-item-description">-->
-        <!--<h6>-->
-          <!--Praxis formazione-->
-        <!--</h6>-->
-        <!--<p>-->
-          <!--Isernia (IS)<br />-->
-          <!--<span class="mute">-->
-                        <!--06/2008 - 12/2008-->
-                    <!--</span>-->
-        <!--</p>-->
-      <!--</div>-->
-      <!--<div class="span9 cv-item-details">-->
-        <!--<h4>-->
-          <!--Corso Web Development-->
-        <!--</h4>-->
-        <!--<p class="last">-->
-          <!--Capacit&agrave; di configurazione, progettazione e creazione di un database MySQL, Access;-->
-          <!--<br />Capacit&agrave; di progettare e realizzare siti Web con linguaggio ServerSide di scripting Open Source quali PHP ed ASP;-->
-          <!--<br />Creazione di elementi interattivi su siti web;-->
-          <!--<br />Capacit&agrave; di creare elementi animati per il web;-->
-          <!--<br />Progettazione di pagine web HTML - XHTML;-->
-          <!--<br />Capacità di configurare un sistema Client/Server;-->
-        <!--</p>-->
-      <!--</div>-->
-    <!--</div>-->
-
-
-
   </div>
-</div>
+</div>  
