@@ -1,4 +1,4 @@
-import {Component, OnInit, ElementRef, ViewChild, AfterViewInit} from '@angular/core';
+import {Component, OnInit, AfterViewInit} from '@angular/core';
 import {Cv} from './entities/cv';
 import { Title } from '@angular/platform-browser';
 import { SocialLink } from './entities/social-link';
@@ -13,6 +13,7 @@ import { AppComponentService } from './services/app-component-service/app-compon
 })
 
 export class AppComponent implements OnInit {
+
   cv: Cv;
   pages: number[] = [];
 
@@ -28,14 +29,14 @@ export class AppComponent implements OnInit {
     this.pages.push(1);
   }
 
-  newElement(index: number, element: Education) {
+  newEducation(index: number, education: Education) {
       console.log('jquery -> ' + index + ' ---- ' + document.getElementById('con').clientHeight);
-      if (element.title === 'Corso Web Design') {
+      if (education.title === 'Corso Web Design') {
         console.log('entrato nell\'if');
       }
   }
 
-  newPage(index: number, element) {
+  newPage(index: number, element: any) {
     console.log(index + ' newPage');
   }
 
