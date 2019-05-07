@@ -1,4 +1,4 @@
-<div class="wrap" *ngFor="let page of pages; let i = index; trackBy:newPage">
+<div class="wrap" *ngFor="let page of pages">
   <div class="content" id='con'>
     <div class="row">
       <div class="span6">
@@ -45,7 +45,7 @@
         </h3>
       </div>
     </div>
-    <div class="row cv-item" *ngFor="let workExperience of cv?.workExperiences">
+    <div class="row cv-item" *ngFor="let workExperience of cv?.workExperiences; trackBy : workExperience">
       <div class="span3 cv-item-description">
         <h6>
           {{workExperience.company}}
@@ -74,7 +74,7 @@
         </h3>
       </div>
     </div>
-    <div class="row cv-item" *ngFor="let education of cv?.education; trackBy:newEducation">
+    <div class="row cv-item" *ngFor="let education of cv?.educations; trackBy : newEducation">
         <div class="span3 cv-item-description">
           <h6>
             {{education.institute}}
@@ -96,4 +96,4 @@
         </div>
     </div>
   </div>
-</div>  
+</div>

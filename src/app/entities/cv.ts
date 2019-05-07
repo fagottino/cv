@@ -1,5 +1,5 @@
 import { WorkExperiences } from './work-experiences';
-import { Education } from './education';
+import { Educations } from './educations';
 import { Knowledge } from './knowledge';
 import { SocialLink } from './social-link';
 import { ContactLink } from './contact-link';
@@ -12,6 +12,6 @@ export class Cv {
   contactLink: ContactLink[];
   socialLink: SocialLink[];
   workExperiences: WorkExperiences[];
-  education: Education[];
+  educations: Educations[];
   knowledge: Knowledge[];
 }

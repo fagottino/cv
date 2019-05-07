@@ -1,9 +1,9 @@
-import {Component, OnInit, AfterViewInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Cv} from './entities/cv';
 import { Title } from '@angular/platform-browser';
 import { SocialLink } from './entities/social-link';
 import { WorkExperiences } from './entities/work-experiences';
-import { Education } from './entities/education';
+import { Educations } from './entities/educations';
 import { AppComponentService } from './services/app-component-service/app-component.service';
 
 @Component({
@@ -15,7 +15,7 @@ import { AppComponentService } from './services/app-component-service/app-compon
 export class AppComponent implements OnInit {
 
   cv: Cv;
-  pages: number[] = [];
+  pages: number[] = [1, 2, 3, 4];
 
   constructor(
     private appComponentService: AppComponentService,
@@ -26,21 +26,21 @@ export class AppComponent implements OnInit {
     this.cv = await this.appComponentService.retrieveData();
     const title = this.createTitle();
     this.titleService.setTitle(title);
-    this.pages.push(1);
   }
 
-  newEducation(index: number, education: Education) {
-      console.log('jquery -> ' + index + ' ---- ' + document.getElementById('con').clientHeight);
+  newEducation = (index: number, education: Educations) => {
+    console.log('jquery -> ' + index + ' ---- ' + document.getElementById('con').clientHeight);
       if (education.title === 'Corso Web Design') {
         console.log('entrato nell\'if');
+        this.addPage();
       }
   }
 
-  newPage(index: number, element: any) {
-    console.log(index + ' newPage');
+  createTitle(): string {
+    return 'CV - ' + this.cv.name.concat(' ', this.cv.surname);
   }
 
-  createTitle(): string {
-    return 'CV ' + this.cv.name + ' ' + this.cv.surname;
+  addPage(): void {
+    this.pages.push(this.pages.length + 1);
   }
 }
