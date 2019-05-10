@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpResponse} from '@angular/common/http';
-import {Cv} from '../../../app/entities/cv';
+import {Cv} from '../../entities/cv';
 import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ReadJsonService {
+export class JsonService {
 
   constructor(private http: HttpClient) { }
 
-  retrieveCvData(url: string): Observable<Cv> {
+  read(url: string): Observable<Cv> {
     return this.http.get<Cv>(url);
   }
 }

@@ -34,6 +34,7 @@ export class AppComponent implements OnInit {
         console.log('entrato nell\'if');
         this.addPage();
       }
+      this.addPage();
   }
 
   createTitle(): string {
