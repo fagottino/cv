@@ -1,6 +1,6 @@
-@import "../_layout/grid.css";
-@import "../_layout/layout.css";
-@import "../_layout/fa470/css/font-awesome.min.css";
+@import "./_layout/grid.css";
+@import "./_layout/layout.css";
+@import "./_layout/fa470/css/font-awesome.min.css";
 
 ol,ul {
   list-style:none;
@@ -396,12 +396,12 @@ a.btn {
 }
 
 .icon {
-  background-image:url(../_layout/images/bg-glyphicons-halflings.png);
+  background-image:url(./_layout/images/bg-glyphicons-halflings.png);
   opacity:0.8;
 }
 
 .icon-white {
-  background-image:url(../_layout/images/bg-glyphicons-halflings-white.png);
+  background-image:url(./_layout/images/bg-glyphicons-halflings-white.png);
   opacity:1;
 }
 
