@@ -1,4 +1,4 @@
-export class Knowledge {
+export class Knowledges {
   title: string;
   level: number;
 }

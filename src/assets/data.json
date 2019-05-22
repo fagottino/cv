@@ -98,7 +98,7 @@
       "description": "Attestato."
     }
   ],
-  "knowledge": [
+  "knowledges": [
     {
       "title": "JAVA",
       "level": 8

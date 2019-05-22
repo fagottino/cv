@@ -1,10 +1,12 @@
-import {Component, OnInit, ChangeDetectorRef, ChangeDetectionStrategy, Input} from '@angular/core';
-import {Cv} from './entities/cv';
+import { Component, OnInit, ChangeDetectorRef, ChangeDetectionStrategy } from '@angular/core';
+import { Cv } from './entities/cv';
 import { Title } from '@angular/platform-browser';
 import { SocialLink } from './entities/social-link';
 import { WorkExperiences } from './entities/work-experiences';
 import { Educations } from './entities/educations';
+import { Knowledges } from './entities/knowledges'
 import { AppComponentService } from './services/app-component-service/app-component.service';
+import { AppSettings } from '../assets/app-settings'
 
 @Component({
   selector: 'app-root',
@@ -18,10 +20,11 @@ export class AppComponent implements OnInit {
   cv: Cv = new Cv();
   workExperiences: WorkExperiences[][] = [];
   educations: Educations[][] = [];
+  knowledges: Knowledges[][] = [];
   cvTemp: Cv;
   pages: number[] = [1];
   pageNumber: number = 0;
-  activeSection: string = "workExperiences";
+  activeSection: string = AppSettings.WORK_EXPERIENCES;
 
   constructor(
     private appComponentService: AppComponentService,
@@ -31,14 +34,15 @@ export class AppComponent implements OnInit {
 
   async ngOnInit() {
     this.cv = await this.appComponentService.retrieveData();
-    const title = this.createTitle();
+    const title = this.appComponentService.createTitle(this.cv);
     this.titleService.setTitle(title);
     this.setWorkExperience();
     this.setEducations();
+    this.setKnowledges();
   }
 
   setWorkExperience(): void {
-    this.activeSection = "workExperiences";
+    this.activeSection = AppSettings.WORK_EXPERIENCES;
     this.cv.workExperiences.forEach(wE => {
       !this.workExperiences[this.pageNumber] ? this.workExperiences[this.pageNumber] = [] : null;
       this.workExperiences[this.pageNumber].push(wE);
@@ -47,7 +51,7 @@ export class AppComponent implements OnInit {
   }
 
   setEducations(): void {
-    this.activeSection = "educations";
+    this.activeSection = AppSettings.EDUCATIONS;
     this.cv.educations.forEach(e => {
       !this.educations[this.pageNumber] ? this.educations[this.pageNumber] = [] : null;
       this.educations[this.pageNumber].push(e);
@@ -55,20 +59,37 @@ export class AppComponent implements OnInit {
     });
   }
 
+  setKnowledges(): void {
+    this.activeSection = AppSettings.KNOWLEDGES;
+    let i = 0
+    while(this.cv.knowledges.length > 0) {
+      !this.knowledges[this.pageNumber] ? this.knowledges[this.pageNumber] = [] : null;
+      this.cv.knowledges.splice(0, 3).forEach(
+        k => this.knowledges[this.pageNumber].push(k)
+      );
+      i++;
+      this.ref.detectChanges();
+    }
+  }
+
   doNewPage(): void {
     switch(this.activeSection) {
-      case "workExperiences":
+      case AppSettings.WORK_EXPERIENCES:
         if (this.workExperiences[this.pageNumber] && this.workExperiences[this.pageNumber].length > 0) {
           this.workExperiences[this.pageNumber + 1] = [];
           this.workExperiences[this.pageNumber + 1].push(this.workExperiences[this.pageNumber].pop());
-          console.log('page changed by workExperiences ');
         }
       break;
-      case "educations":
+      case AppSettings.EDUCATIONS:
         if (this.educations[this.pageNumber] && this.educations[this.pageNumber].length > 0) {
           this.educations[this.pageNumber + 1] = [];
           this.educations[this.pageNumber + 1].push(this.educations[this.pageNumber].pop());
-          console.log('page changed by education ');
+        }
+      break;
+      case AppSettings.KNOWLEDGES:
+        if (this.knowledges[this.pageNumber] && this.knowledges[this.pageNumber].length > 0) {
+          this.knowledges[this.pageNumber + 1] = [];
+          this.knowledges[this.pageNumber + 1].push(this.knowledges[this.pageNumber].pop());
         }
       break;
       default:
@@ -79,13 +100,5 @@ export class AppComponent implements OnInit {
       this.pageNumber = this.pages.length - 1;
       this.ref.detectChanges();
     }
-  }
-
-  setActive(section: string): void {
-    this.activeSection = section;
-  }
-
-  createTitle(): string {
-    return 'CV' + (this.cv ? ' - ' + this.cv.name.concat(' ', this.cv.surname) : '');
   }
 }

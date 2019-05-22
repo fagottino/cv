@@ -1,0 +1,19 @@
+<div class="row" *ngFor="let row of rows">
+  <div class="span3">
+      &nbsp;
+  </div>
+  <div class="span9">
+      <div class="row">
+          <div class="span3 skill" *ngFor="let knowledge of knowledges; trackBy: trackByKnowledge">
+              <h4>
+                  {{knowledge?.title}}
+              </h4>
+              <div class="level">
+                  <span class="l-{{knowledge?.level}}">
+                      good skillset
+                  </span>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

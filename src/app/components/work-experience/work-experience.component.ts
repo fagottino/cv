@@ -19,9 +19,7 @@ export class WorkExperienceComponent implements OnInit, AfterViewChecked {
   
   ngAfterViewChecked(): void {
     if (document.getElementById('con' + this.pageNumber)) {
-      console.log('ngAfterViewChecked workExperiences ' + this.pageNumber + ' ' + document.getElementById('con' + this.pageNumber).clientHeight);
       if (document.getElementById('con' + this.pageNumber).clientHeight > AppSettings.DIV_HEIGTH) {
-        console.log('newPage WorkExperiences');
         this.newPage.emit();
       }
     }

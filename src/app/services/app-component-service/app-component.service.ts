@@ -16,4 +16,8 @@ export class AppComponentService {
   async retrieveData(): Promise<Cv> {
     return await this.json.read(this.cvUrl).toPromise();
   }
+
+  createTitle(cv: Cv): string {
+    return 'CV' + (cv ? ' - ' + cv.name.concat(' ', cv.surname) : '');
+  }
 }

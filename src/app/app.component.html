@@ -37,7 +37,7 @@
         </ul>
       </div>
     </div>
-    <div class="row" *ngIf="workExperiences[i] && workExperiences?.length > 0">
+    <div class="row" *ngIf="workExperiences[i]?.length > 0">
       <div class="span3">&nbsp;</div>
       <div class="span9">
         <h3 class="cv-section-title">
@@ -46,7 +46,7 @@
       </div>
     </div>
     <app-work-experience *ngFor="let workExperience of workExperiences[i]" [workExperience]="workExperience" [pageNumber]="pageNumber" (newPage)="doNewPage()"></app-work-experience>
-    <div class="row" *ngIf="educations[i] && educations?.length > 0">
+    <div class="row" *ngIf="educations[i]?.length > 0">
       <div class="span3">&nbsp;</div>
       <div class="span9">
         <h3 class="cv-section-title">
@@ -55,4 +55,13 @@
       </div>
     </div>
     <app-education *ngFor="let education of educations[i]" [education]="education" [pageNumber]="pageNumber" (newPage)="doNewPage()"></app-education>
+    <div class="row" *ngIf="knowledges[i]?.length > 0">
+      <div class="span3">&nbsp;</div>
+      <div class="span9">
+        <h3 class="cv-section-title">
+          Conoscenze
+        </h3>
+      </div>
+    </div>
+    <app-knowledge [knowledges]="knowledges[i]" [pageNumber]="pageNumber" (newPage)="doNewPage()"></app-knowledge>
 </div>

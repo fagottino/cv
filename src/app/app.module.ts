@@ -6,13 +6,15 @@ import {HttpClientModule} from '@angular/common/http';
 import { PageComponent } from './components/page/page.component';
 import { WorkExperienceComponent } from './components/work-experience/work-experience.component';
 import { EducationComponent } from './components/education/education.component';
+import { KnowledgeComponent } from './components/knowledge/knowledge.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PageComponent,
     WorkExperienceComponent,
-    EducationComponent
+    EducationComponent,
+    KnowledgeComponent
   ],
   imports: [
     BrowserModule,
