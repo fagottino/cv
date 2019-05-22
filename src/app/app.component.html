@@ -1,5 +1,5 @@
-<div class="wrap" *ngFor="let page of pages">
-  <div class="content" id='con'>
+<div class="wrap" *ngFor="let page of pages; let i = index">
+  <div class="content" id="{{ 'con' + i }}">
     <div class="row">
       <div class="span6">
         <h1 class="logo">
@@ -37,36 +37,16 @@
         </ul>
       </div>
     </div>
-    <div class="row">
+    <div class="row" *ngIf="workExperiences[i] && workExperiences?.length > 0">
       <div class="span3">&nbsp;</div>
       <div class="span9">
-        <h3 class="cv-section-title first">
+        <h3 class="cv-section-title">
           Esperienze lavorative
         </h3>
       </div>
     </div>
-    <div class="row cv-item" *ngFor="let workExperience of cv?.workExperiences; trackBy : workExperience">
-      <div class="span3 cv-item-description">
-        <h6>
-          {{workExperience.company}}
-        </h6>
-        <p>
-          {{workExperience.city}}<br />
-          <span class="mute">
-            {{workExperience.dateFromTo}}
-          </span>
-        </p>
-      </div>
-      <div class="span9 cv-item-details">
-        <h4>
-          {{workExperience.title}}
-        </h4>
-        <p class="last">
-          {{workExperience.description}}
-        </p>
-      </div>
-    </div>
-    <div class="row">
+    <app-work-experience *ngFor="let workExperience of workExperiences[i]" [workExperience]="workExperience" [pageNumber]="pageNumber" (newPage)="doNewPage()"></app-work-experience>
+    <div class="row" *ngIf="educations[i] && educations?.length > 0">
       <div class="span3">&nbsp;</div>
       <div class="span9">
         <h3 class="cv-section-title">
@@ -74,26 +54,5 @@
         </h3>
       </div>
     </div>
-    <div class="row cv-item" *ngFor="let education of cv?.educations; trackBy : newEducation">
-        <div class="span3 cv-item-description">
-          <h6>
-            {{education.institute}}
-          </h6>
-          <p>
-            {{education.cityOfInstitute}}<br />
-            <span class="mute">
-              {{education.dateFromTo}}
-            </span>
-          </p>
-        </div>
-        <div class="span9 cv-item-details">
-          <h4>
-            {{education.title}}
-          </h4>
-          <p class="last">
-            {{education.description}}
-          </p>
-        </div>
-    </div>
-  </div>
+    <app-education *ngFor="let education of educations[i]" [education]="education" [pageNumber]="pageNumber" (newPage)="doNewPage()"></app-education>
 </div>

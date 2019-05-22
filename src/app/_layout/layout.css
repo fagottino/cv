@@ -5,8 +5,8 @@
   box-shadow:2px 2px 1px #606060;
   margin:80px auto;
   padding:60px 80px;
-  max-height: 1000px;
-  height: 1000px;
+  max-height: 1120px;
+  height: 1120px;
 }
 
 .wrap+.wrap {
@@ -29,7 +29,7 @@
 .logo {
   line-height:29px;
   text-transform:uppercase;
-  margin-bottom:0;
+  margin-bottom:60px;
   color:#0085d6;
 }
 
