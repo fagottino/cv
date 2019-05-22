@@ -25,12 +25,4 @@ export class KnowledgeComponent implements OnInit, AfterViewChecked {
       }
     }
   }
-
-  trackByKnowledge(index: number, element: Knowledges) {
-    if (index % 3 == 0) {
-      !this.rows ? this.rows = [] : null;
-      this.rows.push(this.rows.length + 1);
-    }
-  }
-
 }
