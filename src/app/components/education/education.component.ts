@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewChecked, Input, Output, EventEmitter } from '@angular/core';
 import { Educations } from 'src/app/entities/educations';
+import { AppSettings } from '../../../assets/app-settings'
 
 @Component({
   selector: 'app-education',
@@ -21,7 +22,7 @@ export class EducationComponent implements OnInit, AfterViewChecked {
   ngAfterViewChecked(): void {
     if (document.getElementById('con' + this.pageNumber)) {
       console.log('Education ' + this.pageNumber + ' ' + document.getElementById('con' + this.pageNumber).clientHeight);
-      if (document.getElementById('con' + this.pageNumber).clientHeight > 1200) {
+      if (document.getElementById('con' + this.pageNumber).clientHeight > AppSettings.DIV_HEIGTH) {
         this.newPage.emit("education");
       }
     }

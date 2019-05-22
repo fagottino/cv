@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, AfterViewChecked, Output, EventEmitter } from '@angular/core';
 import { WorkExperiences } from 'src/app/entities/work-experiences';
+import { AppSettings } from '../../../assets/app-settings'
 
 @Component({
   selector: 'app-work-experience',
@@ -19,7 +20,7 @@ export class WorkExperienceComponent implements OnInit, AfterViewChecked {
   ngAfterViewChecked(): void {
     if (document.getElementById('con' + this.pageNumber)) {
       console.log('ngAfterViewChecked workExperiences ' + this.pageNumber + ' ' + document.getElementById('con' + this.pageNumber).clientHeight);
-      if (document.getElementById('con' + this.pageNumber).clientHeight > 1200) {
+      if (document.getElementById('con' + this.pageNumber).clientHeight > AppSettings.DIV_HEIGTH) {
         console.log('newPage WorkExperiences');
         this.newPage.emit();
       }
