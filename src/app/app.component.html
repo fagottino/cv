@@ -82,4 +82,13 @@
       </div>
     </div>
     <app-language [languages]="languages[i]" [pageNumber]="pageNumber" (newPage)="doNewPage()"></app-language>
+    <div class="row" *ngIf="skillsAndCompetences[i]?.length > 0">
+      <div class="span3">&nbsp;</div>
+      <div class="span9">
+        <h3 class="cv-section-title">
+          Capacit&agrave; e competenze
+        </h3>
+      </div>
+    </div>
+    <app-skills-and-competences *ngFor="let skillsAndCompetence of skillsAndCompetences[i]" [skillsAndCompetence]="skillsAndCompetence" [pageNumber]="pageNumber" (newPage)="doNewPage()"></app-skills-and-competences>
 </div>

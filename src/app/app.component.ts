@@ -9,6 +9,7 @@ import { AppComponentService } from './services/app-component-service/app-compon
 import { AppSettings } from '../assets/app-settings'
 import { Cms } from './entities/cms';
 import { Languages } from './entities/languages';
+import { SkillsAndCompetences } from './entities/skills-and-competences';
 
 @Component({
   selector: 'app-root',
@@ -25,6 +26,7 @@ export class AppComponent implements OnInit {
   knowledges: Knowledges[][] = [];
   cms: Cms[][] = [];
   languages: Languages[][] = [];
+  skillsAndCompetences: SkillsAndCompetences[][] = [];
   cvTemp: Cv;
   pages: number[] = [1];
   pageNumber: number = 0;
@@ -45,6 +47,7 @@ export class AppComponent implements OnInit {
     this.setKnowledges();
     this.setCms();
     this.setLanguages();
+    this.setSkillsAndCompetences();
   }
 
   setWorkExperience(): void {
@@ -88,6 +91,15 @@ export class AppComponent implements OnInit {
     this.cv.languages.forEach(l => {
       !this.languages[this.pageNumber] ? this.languages[this.pageNumber] = [] : null;
       this.languages[this.pageNumber].push(l);
+      this.ref.detectChanges();
+    });
+  }
+
+  setSkillsAndCompetences(): void {
+    this.activeSection = AppSettings.CMS;
+    this.cv.skillsAndCompetences.forEach(sC => {
+      !this.skillsAndCompetences[this.pageNumber] ? this.skillsAndCompetences[this.pageNumber] = [] : null;
+      this.skillsAndCompetences[this.pageNumber].push(sC);
       this.ref.detectChanges();
     });
   }
