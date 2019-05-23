@@ -202,16 +202,51 @@
   ],
   "portfolio": [
     {
-      "title": "",
-      "date": "",
-      "description": ""
+      "title": "MTX7",
+      "date": "11-2013",
+      "company" : "Timesys srl",
+      "description": "Progetto: Sviluppo ed implementazione di moduli su un software baropodometrico.\nIl software analizza in dettaglio i valori pressori rilevati dalla pedana collegata al pc.\nE' stato scritto in C# utilizzando come ambiente di sviluppo Visual Studio 2010 con framework 4.5. Il database usato è Microsoft SQLite con interfaccia Navicat. Le librerie usate sono:\nEyeshot per la visualizzazione 3D del piede acquisito dalla pedana e dei grafici creati dai dati acquisiti;\nXceed per la visualizzazione dei pazienti e degli esami a loro collegati;\nTelerik per disegnare le interfacce del software;\nIdeazione, progettazione e sviluppo in toto di un gestionale Web per la gestione delle activation key, dei clienti e della fatturazione dei moduli legati al software utilizzando le tecnologie:\nPHP, MySQL, JavaScript, AJAX, CSS3."
+    },
+    {
+      "title": "ICBO",
+      "date": "06-2013",
+      "company" : "Timesys srl",
+      "description": "Progettazione del database, ideazione e sviluppo di un gestionale per gestire gli EA (Expert Advisor) in azione su di un conto per il Trading Online.\n\nIl software offre la completa gestione di uno o più EA permettendo la più completa personalizzazione delle azioni da svolgere ogni qual volta il mercato del trading entra in un determinato range.\nScritto in C#, ambiente di sviluppo Visual Studio 2010 con framework 4.5"
+    },
+    {
+      "title": "Incas",
+      "date": "04-2013",
+      "company" : "Timesys srl",
+      "description": "Progettazione del database, ideazione e sviluppo di un gestionale per monitorare i tavoli dei casinò.\nIl software riceve i dati dalle varie telecamere piazzate su ogni singolo tavolo e permette al Pit Boss del casinò ti monitorare l'andamento dei tavoli, con cash-in, cash-out, vincite totali e resoconto giornaliero delle vincite.\nScritto in C#, ambiente di sviluppo Visual Studio 2010 con framework 4.5\nHo sviluppato inoltre un Web services SOAP per la comunicazione tra il tablet in dotazione al Croupier su ogni tavolo ed il sistema centrale per l'aggiornamento in tempo reale dei dati."
+    },
+    {
+      "title": "RenTime",
+      "date": "02-2013",
+      "company" : "Timesys srl",
+      "description": "Ideazione, progettazione e sviluppo di un gestionale Web ad hoc per cliente per il noleggio dei gruppi elettrogeni.\nIl gestionale oltre a permettere l'inserimento, modifica e cancellazione di qualsiasi macchina e ne permette il tracciamento una volta noleggiata, offre la possibilità di inserire gli optional da associare ad ogni macchina e segnalare anche le macchine che risultano guaste, quindi non noleggiabili. Le tecnologie usate sono:\nPHP, MySQL, JavaScript, AJAX, CSS3."
+    },
+    {
+      "title": "RicciCalzature.com",
+      "date": "07-2010",
+      "company" : "Ricci sas",
+      "description": "Installazione, configurazione e personalizzazione grafica/strutturale di Prestashop per la vendita di prodotti online."
     }
   ],
   "contacts": [
     {
-      "title": "",
-      "action": "",
-      "icon": ""
+      "title": "me@orlandoantonio.it",
+      "link": " ",
+      "icon": "inbox"
+    },
+    {
+      "title": "orlandoantonio.it",
+      "link": "orlandoantonio.it",
+      "icon": "globe"
+    },
+    {
+      "title": "Antonio Orlando",
+      "link": "https://telegram.me/fagottino",
+      "icon": "telegram"
     }
   ],
   "sections": [
