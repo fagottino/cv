@@ -12,7 +12,6 @@ export class KnowledgeComponent implements OnInit, AfterViewChecked {
   @Input() knowledges: Knowledges;
   @Input() pageNumber: number;
   @Output() newPage = new EventEmitter();
-  rows: number[] = [1];
 
   constructor() { }
 
