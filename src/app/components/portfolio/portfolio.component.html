@@ -1,0 +1,52 @@
+<div class="portfolio-items">
+  <div class="flexslider">
+    <ul class="slides">
+      <li *ngFor="let portfolio of portfolios">
+        <div class="row">
+          <div class="span">
+            <br />
+            <h5 class="mute">
+              {{portfolio.date}}
+              <span class="mute">
+                &#215;
+              </span>
+              {{portfolio.company}}
+            </h5>
+            <h2 class="last">
+              {{portfolio.title}}
+            </h2>
+            <br />
+            <blockquote>
+              <p>
+                {{portfolio.description}}
+                <!--<strong>
+                  Progetto:
+                </strong>
+                Sviluppo ed implementazione di moduli su un software baropodometrico.<br />
+                Il software analizza in dettaglio i valori pressori rilevati dalla pedana collegata al pc.<br />
+                E' stato scritto in C# utilizzando come ambiente di sviluppo Visual Studio 2010 con framework 4.5. Il
+                database usato è Microsoft SQLite con interfaccia Navicat.
+                Le librerie usate sono:
+                <ul class="disc last">
+                  <li>
+                    <strong>Eyeshot</strong> per la visualizzazione 3D del piede acquisito dalla pedana e dei grafici
+                    creati dai dati acquisiti;
+                  </li>
+                  <li>
+                    <strong>Xceed</strong> per la visualizzazione dei pazienti e degli esami a loro collegati;
+                  </li>
+                  <li>
+                    <strong>Telerik</strong> per disegnare le interfacce del software;
+                  </li>
+                </ul>-->
+              </p>
+            </blockquote>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<!--<script type="text/javascript" src="../../_layout/js/flexslider/jquery.flexslider.min.js"></script>
+<script type="text/javascript" src="../../_layout/js/scripts.js"></script>
+<script type="text/javascript" src="../../_layout/js/plugins.js"></script>-->

@@ -100,4 +100,13 @@
       </div>
     </div>
     <app-interests-and-hobbies [interestsAndHobbies]="interestsAndHobbies[i]" [pageNumber]="pageNumber" (newPage)="doNewPage()"></app-interests-and-hobbies>
+    <div class="row" *ngIf="portfolio[i]?.length > 0">
+      <div class="span3">&nbsp;</div>
+      <div class="span9">
+        <h3 class="cv-section-title">
+          Portfolio
+        </h3>
+      </div>
+    </div>
+    <app-portfolio [portfolios]="portfolio[i]" [pageNumber]="pageNumber" (newPage)="doNewPage()"></app-portfolio>
 </div>

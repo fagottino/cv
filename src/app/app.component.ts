@@ -11,6 +11,7 @@ import { Cms } from './entities/cms';
 import { Languages } from './entities/languages';
 import { SkillsAndCompetences } from './entities/skills-and-competences';
 import { InterestsAndHobbies } from './entities/interests-and-hobbies';
+import { Portfolio } from './entities/portfolio';
 
 @Component({
   selector: 'app-root',
@@ -29,6 +30,7 @@ export class AppComponent implements OnInit {
   languages: Languages[][] = [];
   skillsAndCompetences: SkillsAndCompetences[][] = [];
   interestsAndHobbies: InterestsAndHobbies[][] = [];
+  portfolio: Portfolio[][] = [];
   cvTemp: Cv;
   pages: number[] = [1];
   pageNumber: number = 0;
@@ -51,6 +53,7 @@ export class AppComponent implements OnInit {
     this.setLanguages();
     this.setSkillsAndCompetences();
     this.setInterestsAndHobbies();
+    //this.setPortfolio();
   }
 
   setWorkExperience(): void {
@@ -109,9 +112,18 @@ export class AppComponent implements OnInit {
 
   setInterestsAndHobbies(): void {
     this.activeSection = AppSettings.INTERESTSandHOBBIES;
-    this.cv.interestsAndHobbies.forEach(i => {
+    this.cv.interestsAndHobbies.forEach(iH => {
       !this.interestsAndHobbies[this.pageNumber] ? this.interestsAndHobbies[this.pageNumber] = [] : null;
-      this.interestsAndHobbies[this.pageNumber].push(i);
+      this.interestsAndHobbies[this.pageNumber].push(iH);
+      this.ref.detectChanges();
+    });
+  }
+
+  setPortfolio(): void {
+    this.activeSection = AppSettings.PORTFOLIO;
+    this.cv.portfolio.forEach(p => {
+      !this.portfolio[this.pageNumber] ? this.portfolio[this.pageNumber] = [] : null;
+      this.portfolio[this.pageNumber].push(p);
       this.ref.detectChanges();
     });
   }
@@ -136,10 +148,34 @@ export class AppComponent implements OnInit {
           this.knowledges[this.pageNumber + 1].push(this.knowledges[this.pageNumber].pop());
         }
       break;
+      case AppSettings.CMS:
+        if (this.cms[this.pageNumber] && this.cms[this.pageNumber].length > 0) {
+          this.cms[this.pageNumber + 1] = [];
+          this.cms[this.pageNumber + 1].push(this.cms[this.pageNumber].pop());
+        }
+      break;
+      case AppSettings.LANGUAGES:
+        if (this.languages[this.pageNumber] && this.languages[this.pageNumber].length > 0) {
+          this.languages[this.pageNumber + 1] = [];
+          this.languages[this.pageNumber + 1].push(this.languages[this.pageNumber].pop());
+        }
+      break;
+      case AppSettings.SKILLandCOMPETENCES:
+        if (this.skillsAndCompetences[this.pageNumber] && this.skillsAndCompetences[this.pageNumber].length > 0) {
+          this.skillsAndCompetences[this.pageNumber + 1] = [];
+          this.skillsAndCompetences[this.pageNumber + 1].push(this.skillsAndCompetences[this.pageNumber].pop());
+        }
+      break;
       case AppSettings.INTERESTSandHOBBIES:
         if (this.interestsAndHobbies[this.pageNumber] && this.interestsAndHobbies[this.pageNumber].length > 0) {
           this.interestsAndHobbies[this.pageNumber + 1] = [];
           this.interestsAndHobbies[this.pageNumber + 1].push(this.interestsAndHobbies[this.pageNumber].pop());
+        }
+      break;
+      case AppSettings.PORTFOLIO:
+        if (this.portfolio[this.pageNumber] && this.portfolio[this.pageNumber].length > 0) {
+          this.portfolio[this.pageNumber + 1] = [];
+          this.portfolio[this.pageNumber + 1].push(this.portfolio[this.pageNumber].pop());
         }
       break;
       default:

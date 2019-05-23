@@ -7,6 +7,7 @@ import { Cms } from './cms';
 import { Languages } from './languages';
 import { SkillsAndCompetences } from './skills-and-competences';
 import { InterestsAndHobbies } from './interests-and-hobbies';
+import { Portfolio } from './portfolio';
 
 export class Cv {
   name: string = '';
@@ -23,6 +24,6 @@ export class Cv {
   languages: Languages[] = [];
   skillsAndCompetences: SkillsAndCompetences[] = [];
   interestsAndHobbies: InterestsAndHobbies[] = [];
-  /*portfolio: Portfolio[] = [];
-  contacts: Contacts[] = [];*/
+  portfolio: Portfolio[] = [];
+  /*contacts: Contacts[] = [];*/
 }

@@ -10,6 +10,7 @@ import { CmsComponent } from './components/cms/cms.component';
 import { LanguageComponent } from './components/language/language.component';
 import { SkillsAndCompetencesComponent } from './components/skills-and-competences/skills-and-competences.component';
 import { InterestsAndHobbiesComponent } from './components/interests-and-hobbies/interests-and-hobbies.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { InterestsAndHobbiesComponent } from './components/interests-and-hobbies
     CmsComponent,
     LanguageComponent,
     SkillsAndCompetencesComponent,
-    InterestsAndHobbiesComponent
+    InterestsAndHobbiesComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,
