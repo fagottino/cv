@@ -3,6 +3,7 @@ import { Educations } from './educations';
 import { Knowledges } from './knowledges';
 import { SocialLink } from './social-link';
 import { ContactLink } from './contact-link';
+import { Cms } from './cms';
 
 export class Cv {
   name: string = '';
@@ -15,4 +16,13 @@ export class Cv {
   workExperiences: WorkExperiences[] = [];
   educations: Educations[] = [];
   knowledges: Knowledges[] = [];
+  cms: Cms[] = [];
+  /*knowledges: Knowledges[] = [];
+  knowledges: Knowledges[] = [];
+  knowledges: Knowledges[] = [];
+  knowledges: Knowledges[] = [];
+  knowledges: Knowledges[] = [];
+  knowledges: Knowledges[] = [];
+  knowledges: Knowledges[] = [];
+  knowledges: Knowledges[] = [];*/
 }

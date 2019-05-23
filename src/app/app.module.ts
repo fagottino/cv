@@ -7,6 +7,7 @@ import { PageComponent } from './components/page/page.component';
 import { WorkExperienceComponent } from './components/work-experience/work-experience.component';
 import { EducationComponent } from './components/education/education.component';
 import { KnowledgeComponent } from './components/knowledge/knowledge.component';
+import { CmsComponent } from './components/cms/cms.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { KnowledgeComponent } from './components/knowledge/knowledge.component';
     PageComponent,
     WorkExperienceComponent,
     EducationComponent,
-    KnowledgeComponent
+    KnowledgeComponent,
+    CmsComponent
   ],
   imports: [
     BrowserModule,
