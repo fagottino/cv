@@ -73,4 +73,13 @@
       </div>
     </div>
     <app-cms [cms]="cms[i]" [pageNumber]="pageNumber" (newPage)="doNewPage()"></app-cms>
+    <div class="row" *ngIf="languages[i]?.length > 0">
+      <div class="span3">&nbsp;</div>
+      <div class="span9">
+        <h3 class="cv-section-title">
+          Lingue
+        </h3>
+      </div>
+    </div>
+    <app-language [languages]="languages[i]" [pageNumber]="pageNumber" (newPage)="doNewPage()"></app-language>
 </div>

@@ -8,6 +8,7 @@ import { Knowledges } from './entities/knowledges'
 import { AppComponentService } from './services/app-component-service/app-component.service';
 import { AppSettings } from '../assets/app-settings'
 import { Cms } from './entities/cms';
+import { Languages } from './entities/languages';
 
 @Component({
   selector: 'app-root',
@@ -23,6 +24,7 @@ export class AppComponent implements OnInit {
   educations: Educations[][] = [];
   knowledges: Knowledges[][] = [];
   cms: Cms[][] = [];
+  languages: Languages[][] = [];
   cvTemp: Cv;
   pages: number[] = [1];
   pageNumber: number = 0;
@@ -42,6 +44,7 @@ export class AppComponent implements OnInit {
     this.setEducations();
     this.setKnowledges();
     this.setCms();
+    this.setLanguages();
   }
 
   setWorkExperience(): void {
@@ -76,6 +79,15 @@ export class AppComponent implements OnInit {
     this.cv.cms.forEach(c => {
       !this.cms[this.pageNumber] ? this.cms[this.pageNumber] = [] : null;
       this.cms[this.pageNumber].push(c);
+      this.ref.detectChanges();
+    });
+  }
+
+  setLanguages(): void {
+    this.activeSection = AppSettings.CMS;
+    this.cv.languages.forEach(l => {
+      !this.languages[this.pageNumber] ? this.languages[this.pageNumber] = [] : null;
+      this.languages[this.pageNumber].push(l);
       this.ref.detectChanges();
     });
   }

@@ -8,6 +8,7 @@ import { WorkExperienceComponent } from './components/work-experience/work-exper
 import { EducationComponent } from './components/education/education.component';
 import { KnowledgeComponent } from './components/knowledge/knowledge.component';
 import { CmsComponent } from './components/cms/cms.component';
+import { LanguageComponent } from './components/language/language.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CmsComponent } from './components/cms/cms.component';
     WorkExperienceComponent,
     EducationComponent,
     KnowledgeComponent,
-    CmsComponent
+    CmsComponent,
+    LanguageComponent
   ],
   imports: [
     BrowserModule,
