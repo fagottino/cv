@@ -91,4 +91,13 @@
       </div>
     </div>
     <app-skills-and-competences *ngFor="let skillsAndCompetence of skillsAndCompetences[i]" [skillsAndCompetence]="skillsAndCompetence" [pageNumber]="pageNumber" (newPage)="doNewPage()"></app-skills-and-competences>
+    <div class="row" *ngIf="interestsAndHobbies[i]?.length > 0">
+      <div class="span3">&nbsp;</div>
+      <div class="span9">
+        <h3 class="cv-section-title">
+          Interessi & Hobbies
+        </h3>
+      </div>
+    </div>
+    <app-interests-and-hobbies [interestsAndHobbies]="interestsAndHobbies[i]" [pageNumber]="pageNumber" (newPage)="doNewPage()"></app-interests-and-hobbies>
 </div>

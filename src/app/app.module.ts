@@ -9,6 +9,7 @@ import { KnowledgeComponent } from './components/knowledge/knowledge.component';
 import { CmsComponent } from './components/cms/cms.component';
 import { LanguageComponent } from './components/language/language.component';
 import { SkillsAndCompetencesComponent } from './components/skills-and-competences/skills-and-competences.component';
+import { InterestsAndHobbiesComponent } from './components/interests-and-hobbies/interests-and-hobbies.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SkillsAndCompetencesComponent } from './components/skills-and-competenc
     KnowledgeComponent,
     CmsComponent,
     LanguageComponent,
-    SkillsAndCompetencesComponent
+    SkillsAndCompetencesComponent,
+    InterestsAndHobbiesComponent
   ],
   imports: [
     BrowserModule,

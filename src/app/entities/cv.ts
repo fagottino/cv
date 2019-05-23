@@ -6,6 +6,7 @@ import { ContactLink } from './contact-link';
 import { Cms } from './cms';
 import { Languages } from './languages';
 import { SkillsAndCompetences } from './skills-and-competences';
+import { InterestsAndHobbies } from './interests-and-hobbies';
 
 export class Cv {
   name: string = '';
@@ -21,7 +22,7 @@ export class Cv {
   cms: Cms[] = [];
   languages: Languages[] = [];
   skillsAndCompetences: SkillsAndCompetences[] = [];
-  /*interestsAndHobbies: InterestsAndHobbies[] = [];
-  portfolio: Portfolio[] = [];
+  interestsAndHobbies: InterestsAndHobbies[] = [];
+  /*portfolio: Portfolio[] = [];
   contacts: Contacts[] = [];*/
 }

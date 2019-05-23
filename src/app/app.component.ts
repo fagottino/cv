@@ -10,6 +10,7 @@ import { AppSettings } from '../assets/app-settings'
 import { Cms } from './entities/cms';
 import { Languages } from './entities/languages';
 import { SkillsAndCompetences } from './entities/skills-and-competences';
+import { InterestsAndHobbies } from './entities/interests-and-hobbies';
 
 @Component({
   selector: 'app-root',
@@ -27,6 +28,7 @@ export class AppComponent implements OnInit {
   cms: Cms[][] = [];
   languages: Languages[][] = [];
   skillsAndCompetences: SkillsAndCompetences[][] = [];
+  interestsAndHobbies: InterestsAndHobbies[][] = [];
   cvTemp: Cv;
   pages: number[] = [1];
   pageNumber: number = 0;
@@ -48,6 +50,7 @@ export class AppComponent implements OnInit {
     this.setCms();
     this.setLanguages();
     this.setSkillsAndCompetences();
+    this.setInterestsAndHobbies();
   }
 
   setWorkExperience(): void {
@@ -87,7 +90,7 @@ export class AppComponent implements OnInit {
   }
 
   setLanguages(): void {
-    this.activeSection = AppSettings.CMS;
+    this.activeSection = AppSettings.LANGUAGES;
     this.cv.languages.forEach(l => {
       !this.languages[this.pageNumber] ? this.languages[this.pageNumber] = [] : null;
       this.languages[this.pageNumber].push(l);
@@ -96,10 +99,19 @@ export class AppComponent implements OnInit {
   }
 
   setSkillsAndCompetences(): void {
-    this.activeSection = AppSettings.CMS;
+    this.activeSection = AppSettings.SKILLandCOMPETENCES;
     this.cv.skillsAndCompetences.forEach(sC => {
       !this.skillsAndCompetences[this.pageNumber] ? this.skillsAndCompetences[this.pageNumber] = [] : null;
       this.skillsAndCompetences[this.pageNumber].push(sC);
+      this.ref.detectChanges();
+    });
+  }
+
+  setInterestsAndHobbies(): void {
+    this.activeSection = AppSettings.INTERESTSandHOBBIES;
+    this.cv.interestsAndHobbies.forEach(i => {
+      !this.interestsAndHobbies[this.pageNumber] ? this.interestsAndHobbies[this.pageNumber] = [] : null;
+      this.interestsAndHobbies[this.pageNumber].push(i);
       this.ref.detectChanges();
     });
   }
@@ -122,6 +134,12 @@ export class AppComponent implements OnInit {
         if (this.knowledges[this.pageNumber] && this.knowledges[this.pageNumber].length > 0) {
           this.knowledges[this.pageNumber + 1] = [];
           this.knowledges[this.pageNumber + 1].push(this.knowledges[this.pageNumber].pop());
+        }
+      break;
+      case AppSettings.INTERESTSandHOBBIES:
+        if (this.interestsAndHobbies[this.pageNumber] && this.interestsAndHobbies[this.pageNumber].length > 0) {
+          this.interestsAndHobbies[this.pageNumber + 1] = [];
+          this.interestsAndHobbies[this.pageNumber + 1].push(this.interestsAndHobbies[this.pageNumber].pop());
         }
       break;
       default:

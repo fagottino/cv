@@ -184,20 +184,20 @@
   ],
   "interestsAndHobbies": [
     {
-      "title": "photography",
-      "icon": ""
+      "title": "Fotografia",
+      "icon": "camera-retro"
     },
     {
-      "title": "reading",
-      "icon": ""
+      "title": "Lettura",
+      "icon": "book"
     },
     {
-      "title": "motorcycling",
-      "icon": ""
+      "title": "Motociclismo",
+      "icon": "motorcycle"
     },
     {
-      "title": "travel",
-      "icon": ""
+      "title": "Viaggiare",
+      "icon": "globe"
     }
   ],
   "portfolio": [
