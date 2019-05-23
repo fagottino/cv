@@ -12,7 +12,7 @@
       <div class="span3">
         <div class="social-header hide-on-zoom">
           <a *ngFor="let social of cv?.socialLink" href="{{social.link}}">
-              <i class="fa fa-{{social.icon}} fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-{{social.icon}} fa-2x" aria-hidden="true"></i>
           </a>
         </div>
       </div>
@@ -29,7 +29,7 @@
             </a>
           </li>
           <li *ngFor="let contact of cv?.contactLink">
-              {{contact.name}}
+            {{contact.name}}
             <strong>
               <a href="{{contact.link}}">{{contact.label}}</a>
             </strong>
@@ -45,7 +45,8 @@
         </h3>
       </div>
     </div>
-    <app-work-experience *ngFor="let workExperience of workExperiences[i]" [workExperience]="workExperience" [pageNumber]="pageNumber" (newPage)="doNewPage()"></app-work-experience>
+    <app-work-experience *ngFor="let workExperience of workExperiences[i]" [workExperience]="workExperience"
+      [pageNumber]="pageNumber" (newPage)="doNewPage()"></app-work-experience>
     <div class="row" *ngIf="educations[i]?.length > 0">
       <div class="span3">&nbsp;</div>
       <div class="span9">
@@ -54,7 +55,8 @@
         </h3>
       </div>
     </div>
-    <app-education *ngFor="let education of educations[i]" [education]="education" [pageNumber]="pageNumber" (newPage)="doNewPage()"></app-education>
+    <app-education *ngFor="let education of educations[i]" [education]="education" [pageNumber]="pageNumber"
+      (newPage)="doNewPage()"></app-education>
     <div class="row" *ngIf="knowledges[i]?.length > 0">
       <div class="span3">&nbsp;</div>
       <div class="span9">
@@ -90,7 +92,9 @@
         </h3>
       </div>
     </div>
-    <app-skills-and-competences *ngFor="let skillsAndCompetence of skillsAndCompetences[i]" [skillsAndCompetence]="skillsAndCompetence" [pageNumber]="pageNumber" (newPage)="doNewPage()"></app-skills-and-competences>
+    <app-skills-and-competences *ngFor="let skillsAndCompetence of skillsAndCompetences[i]"
+      [skillsAndCompetence]="skillsAndCompetence" [pageNumber]="pageNumber" (newPage)="doNewPage()">
+    </app-skills-and-competences>
     <div class="row" *ngIf="interestsAndHobbies[i]?.length > 0">
       <div class="span3">&nbsp;</div>
       <div class="span9">
@@ -100,7 +104,7 @@
       </div>
     </div>
     <app-interests-and-hobbies [interestsAndHobbies]="interestsAndHobbies[i]" [pageNumber]="pageNumber" (newPage)="doNewPage()"></app-interests-and-hobbies>
-    <div class="row" *ngIf="portfolio[i]?.length > 0">
+    <!--<div class="row" *ngIf="portfolio[i]?.length > 0">
       <div class="span3">&nbsp;</div>
       <div class="span9">
         <h3 class="cv-section-title">
@@ -108,5 +112,15 @@
         </h3>
       </div>
     </div>
-    <app-portfolio [portfolios]="portfolio[i]" [pageNumber]="pageNumber" (newPage)="doNewPage()"></app-portfolio>
+    <app-portfolio [portfolios]="portfolio[i]" [pageNumber]="pageNumber" (newPage)="doNewPage()"></app-portfolio>-->
+    <div class="row" *ngIf="contacts[i]?.length > 0">
+      <div class="span3">&nbsp;</div>
+      <div class="span9">
+        <h3 class="cv-section-title">
+          Contatti
+        </h3>
+      </div>
+    </div>
+    <app-contact [contacts]="contacts[i]" [pageNumber]="pageNumber" [nameSurname]="cv.name.concat(' ', cv.surname)" (newPage)="doNewPage()"></app-contact>
+  </div>
 </div>

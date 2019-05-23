@@ -1,6 +1,6 @@
 export class WorkExperiences {
   company: string;
-  cityOfCompany: string;
+  city: string;
   dateFromTo: string;
   title: string;
   description: string;

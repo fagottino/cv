@@ -43,7 +43,7 @@
       "company": "Timesys srl",
       "city": "Cassino (FR)",
       "dateFromTo": "02/2011 - 12/2013",
-      "title": "SW/Web Developer",
+      "title": "Developer",
       "description": "Manutenzione su funzioni esistenti ed estensione del SW baropodometrico MTX7;\nCreazione di applicativi Web;\nManutenzione su progetti Web già esistenti; Sviluppo di WebServices SOAP"
     },
     {
@@ -234,17 +234,16 @@
   ],
   "contacts": [
     {
-      "title": "me@orlandoantonio.it",
-      "link": " ",
+      "label": "me@orlandoantonio.it",
       "icon": "inbox"
     },
     {
-      "title": "orlandoantonio.it",
-      "link": "orlandoantonio.it",
+      "label": "orlandoantonio.it",
+      "link": "https://www.orlandoantonio.it",
       "icon": "globe"
     },
     {
-      "title": "Antonio Orlando",
+      "label": "Antonio Orlando",
       "link": "https://telegram.me/fagottino",
       "icon": "telegram"
     }

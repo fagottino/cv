@@ -8,6 +8,7 @@ import { Languages } from './languages';
 import { SkillsAndCompetences } from './skills-and-competences';
 import { InterestsAndHobbies } from './interests-and-hobbies';
 import { Portfolio } from './portfolio';
+import { Contacts } from './contacts';
 
 export class Cv {
   name: string = '';
@@ -25,5 +26,5 @@ export class Cv {
   skillsAndCompetences: SkillsAndCompetences[] = [];
   interestsAndHobbies: InterestsAndHobbies[] = [];
   portfolio: Portfolio[] = [];
-  /*contacts: Contacts[] = [];*/
+  contacts: Contacts[] = [];
 }

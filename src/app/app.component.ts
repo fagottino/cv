@@ -12,6 +12,7 @@ import { Languages } from './entities/languages';
 import { SkillsAndCompetences } from './entities/skills-and-competences';
 import { InterestsAndHobbies } from './entities/interests-and-hobbies';
 import { Portfolio } from './entities/portfolio';
+import { Contacts } from './entities/contacts';
 
 @Component({
   selector: 'app-root',
@@ -31,6 +32,7 @@ export class AppComponent implements OnInit {
   skillsAndCompetences: SkillsAndCompetences[][] = [];
   interestsAndHobbies: InterestsAndHobbies[][] = [];
   portfolio: Portfolio[][] = [];
+  contacts: Contacts[][] = [];
   cvTemp: Cv;
   pages: number[] = [1];
   pageNumber: number = 0;
@@ -54,6 +56,7 @@ export class AppComponent implements OnInit {
     this.setSkillsAndCompetences();
     this.setInterestsAndHobbies();
     //this.setPortfolio();
+    this.setContacts();
   }
 
   setWorkExperience(): void {
@@ -128,6 +131,16 @@ export class AppComponent implements OnInit {
     });
   }
 
+  setContacts(): void {
+    this.activeSection = AppSettings.CONTACTS;
+    this.cv.contacts.forEach(c => {
+      !this.contacts[this.pageNumber] ? this.contacts[this.pageNumber] = [] : null;
+      this.contacts[this.pageNumber].push(c);
+      this.ref.detectChanges();
+    });
+    console.log(this.contacts);
+  }
+
   doNewPage(): void {
     switch(this.activeSection) {
       case AppSettings.WORK_EXPERIENCES:
@@ -176,6 +189,12 @@ export class AppComponent implements OnInit {
         if (this.portfolio[this.pageNumber] && this.portfolio[this.pageNumber].length > 0) {
           this.portfolio[this.pageNumber + 1] = [];
           this.portfolio[this.pageNumber + 1].push(this.portfolio[this.pageNumber].pop());
+        }
+      break;
+      case AppSettings.CONTACTS:
+        if (this.contacts[this.pageNumber] && this.contacts[this.pageNumber].length > 0) {
+          this.contacts[this.pageNumber + 1] = [];
+          this.contacts[this.pageNumber + 1].push(this.contacts[this.pageNumber].pop());
         }
       break;
       default:

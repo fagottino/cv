@@ -1,3 +1,7 @@
 h1 > small {
     display: block;
 }
+
+.mr {
+    margin-right: 5px;
+}

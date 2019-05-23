@@ -1,0 +1,18 @@
+<div class="row cv-item" style="margin-bottom:0;">
+    <div class="span3 cv-item-description" *ngIf="contacts?.length > 0">
+        <h6>
+            {{nameSurname}}
+        </h6>
+    </div>
+    <div class="span9 cv-item-details">
+        <ul class="contact-info-2 fixed">
+            <li *ngFor="let contact of contacts">
+                <i class="fa fa-{{contact.icon}} mr"></i>
+                <a *ngIf="contact.link else contactWithoutLink" href="{{contact.link}}">{{contact.label}}</a>
+                <ng-template #contactWithoutLink>
+                   {{contact.label}}
+                </ng-template>
+            </li>
+        </ul>
+    </div>
+</div>

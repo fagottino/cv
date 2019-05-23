@@ -11,6 +11,7 @@ import { LanguageComponent } from './components/language/language.component';
 import { SkillsAndCompetencesComponent } from './components/skills-and-competences/skills-and-competences.component';
 import { InterestsAndHobbiesComponent } from './components/interests-and-hobbies/interests-and-hobbies.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
     LanguageComponent,
     SkillsAndCompetencesComponent,
     InterestsAndHobbiesComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
