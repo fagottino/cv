@@ -100,7 +100,7 @@
   ],
   "knowledges": [
     {
-      "title": "JAVA",
+      "title": "JAVA 8",
       "level": 8
     },
     {
@@ -109,7 +109,7 @@
     },
     {
       "title": "C",
-      "level": 4
+      "level": 5
     },
     {
       "title": "Android",
@@ -121,11 +121,11 @@
     },
     {
       "title": "AngularJS",
-      "level": 6
+      "level": 7
     },
     {
       "title": "Angular2",
-      "level": 7
+      "level": 8
     },
     {
       "title": "PHP",
@@ -137,33 +137,29 @@
     },
     {
       "title": "HTML/HTML5",
-      "level": 8
+      "level": 9
     },
     {
       "title": "CSS/CSS3",
       "level": 8
     },
     {
-      "title": "Javascript",
+      "title": "JS",
       "level": 8
     },
     {
       "title": "Fireworks",
       "level": 10
-    },
-    {
-      "title": "Illustrator",
-      "level": 6
-    },
-    {
-      "title": "Photoshop",
-      "level": 6
     }
   ],
   "cms": [
     {
       "title": "Prestashop",
       "level": 8
+    },
+    {
+      "title": "Wordpress",
+      "level": 9
     }
   ],
   "languages": [

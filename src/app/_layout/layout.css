@@ -286,6 +286,7 @@
 
 .cv-item,.skill {
   margin-bottom:40px;
+  padding-right: 13px;
 }
 
 #contact-form textarea:focus,#contact-form input[type="text"]:focus {

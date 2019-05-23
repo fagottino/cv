@@ -16,7 +16,8 @@ export class KnowledgeComponent implements OnInit, AfterViewChecked {
 
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit() {
+  }
   
   ngAfterViewChecked(): void {
     if (document.getElementById('con' + this.pageNumber)) {
