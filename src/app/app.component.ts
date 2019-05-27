@@ -138,7 +138,6 @@ export class AppComponent implements OnInit {
       this.contacts[this.pageNumber].push(c);
       this.ref.detectChanges();
     });
-    console.log(this.contacts);
   }
 
   doNewPage(): void {
