@@ -11,12 +11,12 @@
       </div>
       <div class="span3">
         <div class="social-header hide-on-zoom">
-          <a *ngFor="let social of cv?.socialLink" href="{{social.link}}">
+          <a *ngFor="let social of cv?.socialLink" href="{{social.link}}" class="social">
             <i class="fa fa-{{social.icon}} fa-2x" aria-hidden="true"></i>
           </a>
         </div>
       </div>
-      <div class="span3">
+      <div class="span3 header">
         <ul class="contact-info hide-on-zoom fixed">
           <li>
             E-mail:
@@ -37,8 +37,8 @@
         </ul>
       </div>
     </div>
-    <div class="row" *ngIf="workExperiences[i]?.length > 0">
-      <div class="span3">&nbsp;</div>
+    <div class="hr hide-on-phone"></div>
+    <div class="row" *ngIf="!workExperiences[i - 1]">
       <div class="span9">
         <h3 class="cv-section-title">
           Esperienze lavorative
@@ -47,8 +47,7 @@
     </div>
     <app-work-experience *ngFor="let workExperience of workExperiences[i]" [workExperience]="workExperience"
       [pageNumber]="pageNumber" (newPage)="doNewPage()"></app-work-experience>
-    <div class="row" *ngIf="educations[i]?.length > 0">
-      <div class="span3">&nbsp;</div>
+    <div class="row" *ngIf="!educations?[i - 1]">
       <div class="span9">
         <h3 class="cv-section-title">
           Istruzione
@@ -57,8 +56,7 @@
     </div>
     <app-education *ngFor="let education of educations[i]" [education]="education" [pageNumber]="pageNumber"
       (newPage)="doNewPage()"></app-education>
-    <div class="row" *ngIf="knowledges[i]?.length > 0">
-      <div class="span3">&nbsp;</div>
+    <div class="row" *ngIf="knowledges[i]?.length > 0 && !knowledges[i - 1]">
       <div class="span9">
         <h3 class="cv-section-title">
           Conoscenze
@@ -66,8 +64,7 @@
       </div>
     </div>
     <app-knowledge [knowledges]="knowledges[i]" [pageNumber]="pageNumber" (newPage)="doNewPage()"></app-knowledge>
-    <div class="row" *ngIf="cms[i]?.length > 0">
-      <div class="span3">&nbsp;</div>
+    <div class="row" *ngIf="cms[i]?.length > 0 && !cms[i - 1]">
       <div class="span9">
         <h3 class="cv-section-title">
           CMS
@@ -76,7 +73,6 @@
     </div>
     <app-cms [cms]="cms[i]" [pageNumber]="pageNumber" (newPage)="doNewPage()"></app-cms>
     <div class="row" *ngIf="languages[i]?.length > 0">
-      <div class="span3">&nbsp;</div>
       <div class="span9">
         <h3 class="cv-section-title">
           Lingue
@@ -85,7 +81,6 @@
     </div>
     <app-language [languages]="languages[i]" [pageNumber]="pageNumber" (newPage)="doNewPage()"></app-language>
     <div class="row" *ngIf="skillsAndCompetences[i]?.length > 0">
-      <div class="span3">&nbsp;</div>
       <div class="span9">
         <h3 class="cv-section-title">
           Capacit&agrave; e competenze
@@ -96,7 +91,6 @@
       [skillsAndCompetence]="skillsAndCompetence" [pageNumber]="pageNumber" (newPage)="doNewPage()">
     </app-skills-and-competences>
     <div class="row" *ngIf="interestsAndHobbies[i]?.length > 0">
-      <div class="span3">&nbsp;</div>
       <div class="span9">
         <h3 class="cv-section-title">
           Interessi & Hobbies
@@ -114,7 +108,6 @@
     </div>
     <app-portfolio [portfolios]="portfolio[i]" [pageNumber]="pageNumber" (newPage)="doNewPage()"></app-portfolio>-->
     <div class="row" *ngIf="contacts[i]?.length > 0">
-      <div class="span3">&nbsp;</div>
       <div class="span9">
         <h3 class="cv-section-title">
           Contatti
