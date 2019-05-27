@@ -5,7 +5,7 @@ import { AppSettings } from 'src/assets/app-settings';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css', '../../app.component.css', '../../css/customStyle.css']
+  styleUrls: ['./contact.component.css', '../../app.component.css', '../../_layout/customStyle.css']
 })
 export class ContactComponent implements OnInit, AfterViewChecked {
   

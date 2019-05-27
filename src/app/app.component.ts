@@ -17,7 +17,7 @@ import { Contacts } from './entities/contacts';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css', './css/customStyle.css'],
+  styleUrls: ['./app.component.css', './_layout/customStyle.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 
