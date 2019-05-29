@@ -12,6 +12,7 @@ import { SkillsAndCompetencesComponent } from './components/skills-and-competenc
 import { InterestsAndHobbiesComponent } from './components/interests-and-hobbies/interests-and-hobbies.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { CheckArrayLengthPipe } from './pipe/check-array-length.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ContactComponent } from './components/contact/contact.component';
     SkillsAndCompetencesComponent,
     InterestsAndHobbiesComponent,
     PortfolioComponent,
-    ContactComponent
+    ContactComponent,
+    CheckArrayLengthPipe
   ],
   imports: [
     BrowserModule,
