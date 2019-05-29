@@ -107,7 +107,15 @@
   ],
   "knowledges": [
     {
-      "title": "JAVA 7/8",
+      "title": "JAVA",
+      "level": 8
+    },
+    {
+      "title": "Spring",
+      "level": 8
+    },
+    {
+      "title": "Hibernate",
       "level": 8
     },
     {
@@ -121,10 +129,6 @@
     {
       "title": "Android",
       "level": 6
-    },
-    {
-      "title": "AJAX",
-      "level": 8
     },
     {
       "title": "AngularJS",
@@ -147,11 +151,7 @@
       "level": 9
     },
     {
-      "title": "CSS/CSS3",
-      "level": 8
-    },
-    {
-      "title": "JS",
+      "title": "JS/TS",
       "level": 8
     },
     {
