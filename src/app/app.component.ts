@@ -141,6 +141,8 @@ export class AppComponent implements OnInit {
   }
 
   doNewPage(): void {
+    this.pages.push(this.pages.length + 1);
+    this.pageNumber = this.pages.length - 1;
     switch(this.activeSection) {
       case AppSettings.WORK_EXPERIENCES:
         if (this.workExperiences[this.pageNumber] && this.workExperiences[this.pageNumber].length > 0) {
@@ -199,8 +201,6 @@ export class AppComponent implements OnInit {
       default:
       break;
     }
-    this.pages.push(this.pages.length + 1);
-    this.pageNumber = this.pages.length - 1;
     this.ref.detectChanges();
   }
 }

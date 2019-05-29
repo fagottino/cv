@@ -30,21 +30,28 @@
       "city": "Moncalieri (TO)",
       "dateFromTo": "02/2019 - 04/2019",
       "title": "Developer",
-      "description": "Progetto 'Visage' sulle funzionalità di Nuova Anagrafe attualmente in uso presso il gruppo 'Intesa Sanpaolo':\nGestione e lavorazione ticket;\nUtilizzo degli strumenti Change Console, RTC (Relational Team Concert), Ticket Web e SOAP UI;\nManutenzione e sviluppo di WS Rest\nInterrogazione su DB2 tramite applicativi basati su COBOL"
+      "description": "AM sulle funzionalità del progetto 'Visage' Nuova Anagrafe attualmente in uso presso il gruppo 'Intesa Sanpaolo';\nGestione e lavorazione ticket;\nUtilizzo degli strumenti Change Console, RTC (Relational Team Concert), Ticket Web e SOAP UI;\nInterrogazione su DB2 tramite applicativi basati su COBOL\nSviluppo e manutenzione di WS Rest\nSupporto attivo alla fase di test"
     },
     {
       "company": "Xeos.",
       "city": "Isernia (IS)",
       "dateFromTo": "04/2018 - 05/2019",
       "title": "Developer",
-      "description": "Manutenzione e sviluppo di SW Bancari;\nSviluppo WS Rest/Soap;\n"
+      "description": "Sviluppo e manutenzione (BE + FE) di gestionali web Bancari;\nSviluppo di nuove funzionalità WS Rest/Soap;\n"
+    },
+    {
+      "company": "Diasu by Sani Corporate",
+      "city": "Cassino (FR)",
+      "dateFromTo": "04/2012 - 12/2013",
+      "title": "Developer",
+      "description": "Sviluppo e manutenzione di funzionalità nuove/esistenti\nEstensione del SW baropodometrico Milletrix7 (MTX7) con sviluppo e configurazione di nuovi sistemi biometrici (3D BAK, Podoscanalizer) e nuove pedane pressorie (Multisensor 2D, Ultrasensor 3D)"
     },
     {
       "company": "Timesys srl",
       "city": "Cassino (FR)",
-      "dateFromTo": "02/2011 - 12/2013",
+      "dateFromTo": "02/2011 - 04/2012",
       "title": "Developer",
-      "description": "Manutenzione su funzioni esistenti ed estensione del SW baropodometrico MTX7;\nCreazione di applicativi Web;\nManutenzione su progetti Web già esistenti; Sviluppo di WebServices SOAP"
+      "description": "Sviluppo e manutenzione di applicativi Web;\nManutenzione su progetti Web già esistenti\nSviluppo di WebServices SOAP"
     },
     {
       "company": "Ricci sas",
@@ -100,12 +107,12 @@
   ],
   "knowledges": [
     {
-      "title": "JAVA 8",
+      "title": "JAVA 7/8",
       "level": 8
     },
     {
       "title": "C#",
-      "level": 9
+      "level": 7
     },
     {
       "title": "C",
@@ -121,7 +128,7 @@
     },
     {
       "title": "AngularJS",
-      "level": 7
+      "level": 8
     },
     {
       "title": "Angular2",
@@ -136,7 +143,7 @@
       "level": 9
     },
     {
-      "title": "HTML/HTML5",
+      "title": "HTML/CSS",
       "level": 9
     },
     {
@@ -201,6 +208,12 @@
     }
   ],
   "portfolio": [
+    {
+      "title": "Hermes",
+      "date": "08-2018",
+      "company" : "Xeos.",
+      "description": "Nuova versione Portalino Documenti per UniCredit. Il FE del gestionale è stato sviluppato in angular4 con l'applicazione di un tema custom indicato dal cliente. Il lato BE era invece composto da Spring + Hibernate e Java8"
+    },
     {
       "title": "MTX7",
       "date": "11-2013",

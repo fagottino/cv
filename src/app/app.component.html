@@ -135,8 +135,7 @@
     </ng-container>
     <ng-container *ngIf="contacts[i]?.length > 0">
     <div class="social-footer">
-        <a href="https://github.com/fagottino"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
-        <a href="https://twitter.com/fagottino"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+      <a *ngFor="let socialLink of cv?.socialLink" href="{{socialLink.link}}"><i class="fa fa-{{socialLink.icon}} fa-2x" aria-hidden="true"></i></a>
     </div>
     </ng-container>
   </div>
