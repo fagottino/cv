@@ -38,66 +38,81 @@
       </div>
     </div>
     <div class="hr hide-on-phone"></div>
-    <div class="row" *ngIf="workExperiences[i] && (workExperiences | checkArrayLength : i)">
-      <div class="span9">
-        <h3 class="cv-section-title">
-          Esperienze lavorative
-        </h3>
+    <ng-container *ngIf="workExperiences[i]?.length > 0">
+      <div class="row" *ngIf="workExperiences[i] && (workExperiences | checkArrayLength : i)">
+        <div class="span9">
+          <h3 class="cv-section-title">
+            Esperienze lavorative
+          </h3>
+        </div>
       </div>
-    </div>
-    <app-work-experience *ngFor="let workExperience of workExperiences[i]" [workExperience]="workExperience"
-      [pageNumber]="pageNumber" (newPage)="doNewPage()"></app-work-experience>
-    <div class="row" *ngIf="educations[i] && (educations | checkArrayLength : i)">
-      <div class="span9">
-        <h3 class="cv-section-title">
-          Istruzione
-        </h3>
+      <app-work-experience *ngFor="let workExperience of workExperiences[i]" [workExperience]="workExperience"
+        [pageNumber]="pageNumber" (newPage)="doNewPage()"></app-work-experience>
+    </ng-container>
+    <ng-container *ngIf="educations[i]?.length > 0">
+      <div class="row" *ngIf="educations[i] && (educations | checkArrayLength : i)">
+        <div class="span9">
+          <h3 class="cv-section-title">
+            Istruzione
+          </h3>
+        </div>
       </div>
-    </div>
-    <app-education *ngFor="let education of educations[i]" [education]="education" [pageNumber]="pageNumber"
-      (newPage)="doNewPage()"></app-education>
-    <div class="row" *ngIf="knowledges[i]?.length > 0">
-      <div class="span9">
-        <h3 class="cv-section-title">
-          Conoscenze
-        </h3>
+      <app-education *ngFor="let education of educations[i]" [education]="education" [pageNumber]="pageNumber"
+        (newPage)="doNewPage()"></app-education>
+    </ng-container>
+    <ng-container *ngIf="knowledges[i]?.length > 0">
+      <div class="row" *ngIf="knowledges[i] && (knowledges | checkArrayLength : i)">
+        <div class="span9">
+          <h3 class="cv-section-title">
+            Conoscenze
+          </h3>
+        </div>
       </div>
-    </div>
-    <app-knowledge [knowledges]="knowledges[i]" [pageNumber]="pageNumber" (newPage)="doNewPage()"></app-knowledge>
-    <div class="row" *ngIf="cms[i]?.length > 0">
-      <div class="span9">
-        <h3 class="cv-section-title">
-          CMS
-        </h3>
+      <app-knowledge [knowledges]="knowledges[i]" [pageNumber]="pageNumber" (newPage)="doNewPage()"></app-knowledge>
+    </ng-container>
+    <ng-container *ngIf="cms[i]?.length > 0">
+      <div class="row" *ngIf="cms[i] && (cms | checkArrayLength : i)">
+        <div class="span9">
+          <h3 class="cv-section-title">
+            CMS
+          </h3>
+        </div>
       </div>
-    </div>
-    <app-cms [cms]="cms[i]" [pageNumber]="pageNumber" (newPage)="doNewPage()"></app-cms>
-    <div class="row" *ngIf="languages[i]?.length > 0">
-      <div class="span9">
-        <h3 class="cv-section-title">
-          Lingue
-        </h3>
+      <app-cms [cms]="cms[i]" [pageNumber]="pageNumber" (newPage)="doNewPage()"></app-cms>
+    </ng-container>
+    <ng-container *ngIf="languages[i]?.length > 0">
+      <div class="row" *ngIf="languages[i] && (languages | checkArrayLength : i)">
+        <div class="span9">
+          <h3 class="cv-section-title">
+            Lingue
+          </h3>
+        </div>
       </div>
-    </div>
-    <app-language [languages]="languages[i]" [pageNumber]="pageNumber" (newPage)="doNewPage()"></app-language>
-    <div class="row" *ngIf="skillsAndCompetences[i]?.length > 0">
-      <div class="span9">
-        <h3 class="cv-section-title">
-          Capacit&agrave; e competenze
-        </h3>
+      <app-language [languages]="languages[i]" [pageNumber]="pageNumber" (newPage)="doNewPage()"></app-language>
+    </ng-container>
+    <ng-container *ngIf="skillsAndCompetences[i]?.length > 0">
+      <div class="row" *ngIf="skillsAndCompetences[i] && (skillsAndCompetences | checkArrayLength : i)">
+        <div class="span9">
+          <h3 class="cv-section-title">
+            Capacit&agrave; e competenze
+          </h3>
+        </div>
       </div>
-    </div>
-    <app-skills-and-competences *ngFor="let skillsAndCompetence of skillsAndCompetences[i]"
-      [skillsAndCompetence]="skillsAndCompetence" [pageNumber]="pageNumber" (newPage)="doNewPage()">
-    </app-skills-and-competences>
-    <div class="row" *ngIf="interestsAndHobbies[i]?.length > 0">
-      <div class="span9">
-        <h3 class="cv-section-title">
-          Interessi & Hobbies
-        </h3>
+      <app-skills-and-competences *ngFor="let skillsAndCompetence of skillsAndCompetences[i]"
+        [skillsAndCompetence]="skillsAndCompetence" [pageNumber]="pageNumber" (newPage)="doNewPage()">
+      </app-skills-and-competences>
+    </ng-container>
+    <ng-container *ngIf="interestsAndHobbies[i]?.length > 0">
+      <div class="row" *ngIf="interestsAndHobbies[i] && (interestsAndHobbies | checkArrayLength : i)">
+        <div class="span9">
+          <h3 class="cv-section-title">
+            Interessi & Hobbies
+          </h3>
+        </div>
       </div>
-    </div>
-    <app-interests-and-hobbies [interestsAndHobbies]="interestsAndHobbies[i]" [pageNumber]="pageNumber" (newPage)="doNewPage()"></app-interests-and-hobbies>
+      <app-interests-and-hobbies [interestsAndHobbies]="interestsAndHobbies[i]" [pageNumber]="pageNumber"
+        (newPage)="doNewPage()"></app-interests-and-hobbies>
+    </ng-container>
     <!--<div class="row" *ngIf="portfolio[i]?.length > 0">
       <div class="span3">&nbsp;</div>
       <div class="span9">
@@ -107,13 +122,22 @@
       </div>
     </div>
     <app-portfolio [portfolios]="portfolio[i]" [pageNumber]="pageNumber" (newPage)="doNewPage()"></app-portfolio>-->
-    <div class="row" *ngIf="contacts[i]?.length > 0">
-      <div class="span9">
-        <h3 class="cv-section-title">
-          Contatti
-        </h3>
+    <ng-container *ngIf="contacts[i]?.length > 0">
+      <div class="row" *ngIf="contacts | checkArrayLength : i">
+        <div class="span9">
+          <h3 class="cv-section-title">
+            Contatti
+          </h3>
+        </div>
       </div>
+      <app-contact [contacts]="contacts[i]" [pageNumber]="pageNumber" [nameSurname]="cv.name.concat(' ', cv.surname)"
+        (newPage)="doNewPage()"></app-contact>
+    </ng-container>
+    <ng-container *ngIf="contacts[i]?.length > 0">
+    <div class="social-footer">
+        <a href="https://github.com/fagottino"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+        <a href="https://twitter.com/fagottino"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
     </div>
-    <app-contact [contacts]="contacts[i]" [pageNumber]="pageNumber" [nameSurname]="cv.name.concat(' ', cv.surname)" (newPage)="doNewPage()"></app-contact>
+    </ng-container>
   </div>
 </div>

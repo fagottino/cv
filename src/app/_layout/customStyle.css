@@ -17,3 +17,15 @@ h1 > small {
 .header {
     margin-left: 20px;
 }
+
+.social-footer {
+    bottom: 10px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    left: 0;
+}
+
+.social-footer a {
+    margin-left: 5px;
+}

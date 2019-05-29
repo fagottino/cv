@@ -199,10 +199,8 @@ export class AppComponent implements OnInit {
       default:
       break;
     }
-    if (this.pages.length < 6) {
-      this.pages.push(this.pages.length + 1);
-      this.pageNumber = this.pages.length - 1;
-      this.ref.detectChanges();
-    }
+    this.pages.push(this.pages.length + 1);
+    this.pageNumber = this.pages.length - 1;
+    this.ref.detectChanges();
   }
 }
