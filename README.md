@@ -8,7 +8,7 @@ Once the `data.json` file is compiled with your information, a website is create
 
 [Here](https://fagottino.github.io/cv/) you can see it in action while processing the [data](https://fagottino.github.io/cv/assets/data.json)
 
-![](www.orlandoantonio.it/01favicon.png)
+![](www.orlandoantonio.it/01/favicon.png)
 
 ```
 /fago
