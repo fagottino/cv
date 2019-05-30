@@ -4,11 +4,11 @@ Personal project.
 
 Once the `data.json` file is compiled with your information, a website is created containing the information formatted as a CV
 
-# Running
+#
 
-[Here](https://fagottino.github.io/cv/) you can see it in action while processing the [data](https://fagottino.github.io/cv/assets/data.json)
+You can see it in action [here](https://fagottino.github.io/cv/) while processing my [data](https://fagottino.github.io/cv/assets/data.json)
 
-![](www.orlandoantonio.it/01/favicon.png)
+#
 
 ```
 /fago

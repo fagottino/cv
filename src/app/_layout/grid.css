@@ -67,7 +67,7 @@
 
 .span9 {
 	width: 565px;
-	margin-left: 20px
+	margin-left: 20px;
 }
 
 .span9np {
@@ -159,26 +159,7 @@
 	}
 }
 
-@media only screen and (max-width:767px) {
-	.row {
-		width: 280px
-	}
-	.span1,
-	.span2,
-	.span3,
-	.span4,
-	.span5,
-	.span6,
-	.span7,
-	.span8,
-	.span9,
-	.span10,
-	.span11,
-	.span12 {
-		width: 280px;
-		margin-left: 0
-	}
-}
+
 
 @media only screen and (min-width:480px) and (max-width:767px) {
 	.row {
@@ -286,4 +267,12 @@
 	visibility: hidden;
 	width: 0;
 	height: 0
+}
+
+.pr {
+	float: right !important;
+}
+
+svg {
+	width: 40%;
 }

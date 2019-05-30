@@ -19,14 +19,9 @@ export class EducationComponent implements OnInit, AfterViewChecked {
   ngOnInit() { }
   
   ngAfterViewChecked(): void {
-    /*let element = document.getElementById('con' + this.pageNumber);
-    if (element != null) {
-      if (document.getElementById('con' + this.pageNumber).clientHeight > AppSettings.DIV_HEIGTH) {
-        this.newPage.emit("education");
-    }*/
     if (document.getElementById('con' + this.pageNumber)) {
       if (document.getElementById('con' + this.pageNumber).clientHeight > AppSettings.DIV_HEIGTH) {
-        this.newPage.emit("education");
+        this.newPage.emit();
       }
     }
   }
