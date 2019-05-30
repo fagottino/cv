@@ -1,6 +1,6 @@
-<div class="wrap" *ngFor="let page of pages; let i = index">
+<div class="wrap" *ngFor="let page of pages; let i = index; last as isLast">
   <div class="content" id="{{ 'con' + i }}">
-    <div class="row" [ngClass]="{'hide-on-phone': i != 0}">
+    <div class="row row-header">
       <div class="span6">
         <h1 class="logo">
           {{cv?.name.concat(' ', cv?.surname)}}
@@ -123,20 +123,20 @@
     </div>
     <app-portfolio [portfolios]="portfolio[i]" [pageNumber]="pageNumber" (newPage)="doNewPage()"></app-portfolio>-->
     <ng-container *ngIf="contacts[i]?.length > 0">
-      <div class="row" *ngIf="contacts | checkArrayLength : i">
+      <div class="row" *ngIf="contacts | checkArrayLength : i" class="hide-on-phone">
         <div class="span9">
           <h3 class="cv-section-title">
             Contatti
           </h3>
         </div>
       </div>
-      <app-contact [contacts]="contacts[i]" [pageNumber]="pageNumber" [nameSurname]="cv.name.concat(' ', cv.surname)"
+      <app-contact [contacts]="contacts[i]" [pageNumber]="pageNumber" [nameSurname]="cv?.name.concat(' ', cv?.surname)"
         (newPage)="doNewPage()"></app-contact>
     </ng-container>
-    <ng-container *ngIf="contacts[i]?.length > 0">
-    <div class="social-footer">
-      <a *ngFor="let socialLink of cv?.socialLink" href="{{socialLink.link}}"><i class="fa fa-{{socialLink.icon}} fa-2x" aria-hidden="true"></i></a>
-    </div>
+    <ng-container>
+      <div class="social-footer" *ngIf="isLast">
+        <a *ngFor="let socialLink of cv?.socialLink" href="{{socialLink.link}}"><i class="fa fa-{{socialLink.icon}} fa-2x" aria-hidden="true"></i></a>
+      </div>
     </ng-container>
   </div>
 </div>

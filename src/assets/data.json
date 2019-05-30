@@ -37,7 +37,7 @@
       "city": "Isernia (IS)",
       "dateFromTo": "04/2018 - 05/2019",
       "title": "Developer",
-      "description": "Sviluppo e manutenzione (BE + FE) di gestionali web Bancari;\nSviluppo di nuove funzionalità WS Rest/Soap;\n"
+      "description": "Sviluppo e manutenzione di gestionali web principalmente in ambito Bancario;\nSviluppo di nuove funzionalità WS Rest/Soap;\nManutenzione e sviluppo di nuovi servizi su applicativi già esistenti"
     },
     {
       "company": "Diasu by Sani Corporate",
@@ -119,16 +119,20 @@
       "level": 8
     },
     {
+      "title": "SQL",
+      "level": 9
+    },
+    {
+      "title": "Android",
+      "level": 6
+    },
+    {
       "title": "C#",
       "level": 7
     },
     {
       "title": "C",
       "level": 5
-    },
-    {
-      "title": "Android",
-      "level": 6
     },
     {
       "title": "AngularJS",
@@ -139,20 +143,16 @@
       "level": 8
     },
     {
-      "title": "PHP",
-      "level": 9
+      "title": "JS/TS",
+      "level": 8
     },
     {
-      "title": "SQL",
+      "title": "PHP",
       "level": 9
     },
     {
       "title": "HTML/CSS",
       "level": 9
-    },
-    {
-      "title": "JS/TS",
-      "level": 8
     },
     {
       "title": "Fireworks",
@@ -182,7 +182,8 @@
   "skillsAndCompetences": [
     {
       "title": "Relazionali/Organizzative",
-      "description": "Ottime capacità relazionali, ottima predisposizione al lavoro in team. Creatività e dinamismo, buono spirito di adattamento.\nBuona autonomia e capacità organizzativa, predisposizione all'iniziativa. Capacità di lavorare in qualsiasi situazione."
+      "description": "Buona conoscenza degli ambienti lavorativi sia statici (uffici) che dinamici (remote working/consulting)\nCapacità di adattamento, relazionali e al lavoro in team. Creatività e dinamismo.\nBuona capacità organizzativa di progetti e lavori, autonomi e non."
+
     },
     {
       "title": "Tecniche",
