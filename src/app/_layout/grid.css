@@ -178,6 +178,10 @@
 		width: 280px;
 		margin-left: 0
 	}
+	.social-header,
+	.header > ul > li {
+		text-align: center !important;
+	}
 }
 
 @media only screen and (min-width:480px) and (max-width:767px) {
