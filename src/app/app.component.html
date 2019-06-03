@@ -11,9 +11,11 @@
       </div>
       <div class="span3">
         <div class="social-header hide-on-zoom">
-          <a *ngFor="let social of cv?.socialLink" href="{{social.link}}" class="social">
-            <i class="fa fa-{{social.icon}} fa-2x" aria-hidden="true"></i>
-          </a>
+          <ng-container *ngFor="let social of cv?.socialLink">
+              <a href="{{social.link}}" class="social" *ngIf="social.showInHeader != false">
+                <i class="fa fa-{{social.icon}} fa-2x" aria-hidden="true"></i>
+              </a>
+          </ng-container>
         </div>
       </div>
       <div class="span3 header">
@@ -135,7 +137,7 @@
     </ng-container>
     <ng-container>
       <div class="social-footer" *ngIf="isLast">
-        <a *ngFor="let socialLink of cv?.socialLink" href="{{socialLink.link}}"><i class="fa fa-{{socialLink.icon}} fa-2x" aria-hidden="true"></i></a>
+        <a *ngFor="let socialLink of cv?.socialLink" href="{{socialLink.link}}" class="sf"><i class="fa fa-{{socialLink.icon}} fa-2x" aria-hidden="true"></i></a>
       </div>
     </ng-container>
   </div>
