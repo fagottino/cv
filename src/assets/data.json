@@ -14,14 +14,22 @@
   ],
   "socialLink": [
     {
+      "link": "https://www.linkedin.com/in/fagottino/",
+      "icon": "linkedin",
+      "label": "Linkedin",
+      "showInHeader": true
+    },
+    {
     "link": "https://github.com/fagottino",
     "icon": "github",
-    "label": "Github"
+    "label": "Github",
+    "showInHeader": true
     },
     {
       "link": "https://twitter.com/fagottino",
       "icon": "twitter",
-      "label": "Twitter"
+      "label": "Twitter",
+      "showInHeader": false
     }
   ],
   "workExperiences": [

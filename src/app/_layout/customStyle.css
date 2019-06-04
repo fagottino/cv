@@ -26,6 +26,6 @@ h1 > small {
     left: 0;
 }
 
-.social-footer a {
-    margin-left: 5px;
+.sf+.sf {
+    margin-left: 10px;
 }

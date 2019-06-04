@@ -427,6 +427,9 @@
 		width: 280px;
 		margin-left: 0
 	}
+	.sf+.sf {
+		margin-left: 10px;
+	}
 	.social-header,
 	.header > ul > li {
 		text-align: center !important;
