@@ -4,6 +4,7 @@
   "description": "SW/WEB developer",
   "email": "me@orlandoantonio.it",
   "website": "orlandoantonio.it",
+  "docUrl": "./assets/files/CV_Antonio_Orlando.pdf",
   "contactLink": [
     {
     "link": "https://telegram.me/fagottino",
@@ -29,6 +30,12 @@
       "link": "https://twitter.com/fagottino",
       "icon": "twitter",
       "label": "Twitter",
+      "showInHeader": false
+    },
+    {
+      "link": "https://instagram.com/fagottinoo",
+      "icon": "instagram",
+      "label": "Instagram",
       "showInHeader": false
     }
   ],
@@ -57,7 +64,7 @@
     {
       "company": "Timesys srl",
       "city": "Cassino (FR)",
-      "dateFromTo": "02/2011 - 04/2012",
+      "dateFromTo": "02/2011 - 12/2013",
       "title": "Developer",
       "description": "Sviluppo e manutenzione di applicativi Web;\nManutenzione su progetti Web già esistenti\nSviluppo di WebServices SOAP"
     },
@@ -66,14 +73,14 @@
       "city": "Venafro (IS)",
       "dateFromTo": "05/2010 - 01/2011",
       "title": "Web Developer",
-      "description": "Installazione, configurazione e personalizzazione di Prestashop per la vendita online.\nUtilizzando il CMS open-source PrestaShop ho configurato e messo online l'intero e-commerce."
+      "description": "Installazione, configurazione e personalizzazione di Prestashop per la vendita online.\nUtilizzando il CMS open-source PrestaShop ho configurato e messo online l'intero e-commerce"
     },
     {
       "company": "Cercaziende.it spa",
       "city": "Venafro (IS)",
       "dateFromTo": "09/2009 - 04/2010",
       "title": "Web Developer",
-      "description": "Architettura e sviluppo di piattaforme e-commerce, programmazione lato server e client orientata alle web application. \nProgettazione e gestione di database relazionali. Collaborazione continuativa in un team di sviluppatori.\nGestione, creazione di moduli aggiuntivi, modifica dei template e dei contenuti degli e-commerce, dei CMS aziendali e di vari siti web dei clienti."
+      "description": "Architettura e sviluppo di piattaforme e-commerce, programmazione lato server e client orientata alle web application. \nProgettazione e gestione di database relazionali. Collaborazione continuativa in un team di sviluppatori.\nGestione, creazione di moduli aggiuntivi, modifica dei template e dei contenuti degli e-commerce, dei CMS aziendali e di vari siti web dei clienti"
     }
   ],
   "educations": [
@@ -89,14 +96,14 @@
       "cityOfInstitute": "Isernia (IS)",
       "dateFromTo": "06/2008 - 12/2008",
       "title": "Corso Web Development",
-      "description": "Capacit&agrave; di configurazione, progettazione e creazione di un database MySQL, Access;\nCapacit&agrave; di progettare e realizzare siti Web con linguaggio ServerSide di scripting Open Source quali PHP ed ASP;\nCreazione di elementi interattivi su siti web;\nCapacit&agrave; di creare elementi animati per il web;\nProgettazione di pagine web HTML - XHTML;\nCapacità di configurare un sistema Client/Server."
+      "description": "Capacità di configurazione, progettazione e creazione di un database MySQL, Access;\nCapacità di progettare e realizzare siti Web con linguaggio ServerSide di scripting Open Source quali PHP ed ASP;\nCreazione di elementi interattivi su siti web;\nCapacità di creare elementi animati per il web;\nProgettazione di pagine web HTML - XHTML;\nCapacità di configurare un sistema Client/Server."
     },
     {
       "institute": "Centro Molisano di Studi Cooperativi",
       "cityOfInstitute": "Isernia (IS)",
       "dateFromTo": "10/2007 - 02/2008",
       "title": "Corso Web Design",
-      "description": "Capacit&agrave; di ottimizzare formati grafici, creare loghi e marchi e progettare pagine web;\nRealizzare operazioni con oggetti vettoriali nonch&egrave; operazioni bitmap;\nApplicazione di colori, tratti, riempimenti ed effetti dal vivo;\nRealizzare operazioni con livelli e maschere;\nCreazione e/o modifica di porzioni HTML e rollover\nCreazione pulsanti, menù a comparsa e/o animazione\nRealizzazione di pagine web con la gestione dei contenuti\nGestione del sito e delle immagini\nInserzione di audio nelle pagine web\nCapacit&agrave; di comunicare ai clienti attraverso il web."
+      "description": "Capacità di ottimizzare formati grafici, creare loghi e marchi e progettare pagine web;\nRealizzare operazioni con oggetti vettoriali nonchè operazioni bitmap;\nApplicazione di colori, tratti, riempimenti ed effetti dal vivo;\nRealizzare operazioni con livelli e maschere;\nCreazione e/o modifica di porzioni HTML e rollover\nCreazione pulsanti, menù a comparsa e/o animazione\nRealizzazione di pagine web con la gestione dei contenuti\nGestione del sito e delle immagini\nInserzione di audio nelle pagine web\nCapacità di comunicare ai clienti attraverso il web."
     },
     {
       "institute": "I.T.I.S. \"E. Mattei\"",

@@ -16,6 +16,7 @@ export class Cv {
   description: string = '';
   email: string = '';
   website: string = '';
+  docUrl: string = '';
   contactLink: ContactLink[] = [];
   socialLink: SocialLink[] = [];
   workExperiences: WorkExperiences[] = [];
