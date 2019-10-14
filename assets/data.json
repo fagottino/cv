@@ -31,6 +31,12 @@
       "icon": "twitter",
       "label": "Twitter",
       "showInHeader": false
+    },
+    {
+      "link": "https://instagram.com/fagottinoo",
+      "icon": "instagram",
+      "label": "Instagram",
+      "showInHeader": false
     }
   ],
   "workExperiences": [
