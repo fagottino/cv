@@ -79,11 +79,14 @@ export class AppComponent implements OnInit {
 
   setKnowledges(): void {
     this.activeSection = AppSettings.KNOWLEDGES;
-    this.cv.knowledges.forEach(k => {
+    for (let i = 0; i < this.cv.knowledges.length; i++) {
       !this.knowledges[this.pageNumber] ? this.knowledges[this.pageNumber] = [] : null;
-      this.knowledges[this.pageNumber].push(k)
+      for (let k = 0; k < 3; k++) {
+        if (this.cv.knowledges[0])
+          this.knowledges[this.pageNumber].push(this.cv.knowledges.shift());
+      }
       this.ref.detectChanges();
-    });
+    }
   }
 
   setCms(): void {
