@@ -139,11 +139,14 @@ export class AppComponent implements OnInit {
 
   setContacts(): void {
     this.activeSection = AppSettings.CONTACTS;
-    this.cv.contacts.forEach(c => {
+    for (let i = 0; i < this.cv.contacts.length; i++) {
       !this.contacts[this.pageNumber] ? this.contacts[this.pageNumber] = [] : null;
-      this.contacts[this.pageNumber].push(c);
+      for (let k = 0; k < 3; k++) {
+        if (this.cv.contacts[0])
+          this.contacts[this.pageNumber].push(this.cv.contacts.shift());
+      }
       this.ref.detectChanges();
-    });
+    }
   }
 
   doNewPage(): void {
