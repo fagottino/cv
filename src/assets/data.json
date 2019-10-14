@@ -4,6 +4,7 @@
   "description": "SW/WEB developer",
   "email": "me@orlandoantonio.it",
   "website": "orlandoantonio.it",
+  "docUrl": "./assets/files/CV_Antonio_Orlando.pdf",
   "contactLink": [
     {
     "link": "https://telegram.me/fagottino",
@@ -57,7 +58,7 @@
     {
       "company": "Timesys srl",
       "city": "Cassino (FR)",
-      "dateFromTo": "02/2011 - 04/2012",
+      "dateFromTo": "02/2011 - 12/2013",
       "title": "Developer",
       "description": "Sviluppo e manutenzione di applicativi Web;\nManutenzione su progetti Web già esistenti\nSviluppo di WebServices SOAP"
     },
@@ -66,14 +67,14 @@
       "city": "Venafro (IS)",
       "dateFromTo": "05/2010 - 01/2011",
       "title": "Web Developer",
-      "description": "Installazione, configurazione e personalizzazione di Prestashop per la vendita online.\nUtilizzando il CMS open-source PrestaShop ho configurato e messo online l'intero e-commerce."
+      "description": "Installazione, configurazione e personalizzazione di Prestashop per la vendita online.\nUtilizzando il CMS open-source PrestaShop ho configurato e messo online l'intero e-commerce"
     },
     {
       "company": "Cercaziende.it spa",
       "city": "Venafro (IS)",
       "dateFromTo": "09/2009 - 04/2010",
       "title": "Web Developer",
-      "description": "Architettura e sviluppo di piattaforme e-commerce, programmazione lato server e client orientata alle web application. \nProgettazione e gestione di database relazionali. Collaborazione continuativa in un team di sviluppatori.\nGestione, creazione di moduli aggiuntivi, modifica dei template e dei contenuti degli e-commerce, dei CMS aziendali e di vari siti web dei clienti."
+      "description": "Architettura e sviluppo di piattaforme e-commerce, programmazione lato server e client orientata alle web application. \nProgettazione e gestione di database relazionali. Collaborazione continuativa in un team di sviluppatori.\nGestione, creazione di moduli aggiuntivi, modifica dei template e dei contenuti degli e-commerce, dei CMS aziendali e di vari siti web dei clienti"
     }
   ],
   "educations": [
