@@ -118,11 +118,14 @@ export class AppComponent implements OnInit {
 
   setInterestsAndHobbies(): void {
     this.activeSection = AppSettings.INTERESTSandHOBBIES;
-    this.cv.interestsAndHobbies.forEach(iH => {
+    for (let i = 0; i < this.cv.interestsAndHobbies.length; i++) {
       !this.interestsAndHobbies[this.pageNumber] ? this.interestsAndHobbies[this.pageNumber] = [] : null;
-      this.interestsAndHobbies[this.pageNumber].push(iH);
+      for (let k = 0; k < 4; k++) {
+        if (this.cv.interestsAndHobbies[0])
+          this.interestsAndHobbies[this.pageNumber].push(this.cv.interestsAndHobbies.shift());
+      }
       this.ref.detectChanges();
-    });
+    }
   }
 
   setPortfolio(): void {
