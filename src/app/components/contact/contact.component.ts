@@ -22,7 +22,7 @@ export class ContactComponent implements OnInit, AfterViewChecked {
   ngAfterViewChecked(): void {
     if (document.getElementById('con' + this.pageNumber)) {
       if (document.getElementById('con' + this.pageNumber).clientHeight > AppSettings.DIV_HEIGTH) {
-        this.newPage.emit();
+        this.contacts.length > 3 ? this.newPage.emit() : "";
       }
     }
   }

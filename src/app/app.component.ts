@@ -79,7 +79,7 @@ export class AppComponent implements OnInit {
 
   setKnowledges(): void {
     this.activeSection = AppSettings.KNOWLEDGES;
-    for (let i = 0; i < this.cv.knowledges.length; i++) {
+    for (let i = 0; i <= this.cv.knowledges.length; i++) {
       !this.knowledges[this.pageNumber] ? this.knowledges[this.pageNumber] = [] : null;
       for (let k = 0; k < 3; k++) {
         if (this.cv.knowledges[0])
@@ -118,7 +118,7 @@ export class AppComponent implements OnInit {
 
   setInterestsAndHobbies(): void {
     this.activeSection = AppSettings.INTERESTSandHOBBIES;
-    for (let i = 0; i < this.cv.interestsAndHobbies.length; i++) {
+    for (let i = 0; i <= this.cv.interestsAndHobbies.length; i++) {
       !this.interestsAndHobbies[this.pageNumber] ? this.interestsAndHobbies[this.pageNumber] = [] : null;
       for (let k = 0; k < 4; k++) {
         if (this.cv.interestsAndHobbies[0])
@@ -139,7 +139,7 @@ export class AppComponent implements OnInit {
 
   setContacts(): void {
     this.activeSection = AppSettings.CONTACTS;
-    for (let i = 0; i < this.cv.contacts.length; i++) {
+    for (let i = 0; i <= this.cv.contacts.length; i++) {
       !this.contacts[this.pageNumber] ? this.contacts[this.pageNumber] = [] : null;
       for (let k = 0; k < 3; k++) {
         if (this.cv.contacts[0])
@@ -149,7 +149,7 @@ export class AppComponent implements OnInit {
     }
   }
 
-  doNewPage(): void {
+  doNewPage(page: string): void {
     this.pages.push(this.pages.length + 1);
     this.pageNumber = this.pages.length - 1;
     switch(this.activeSection) {
@@ -162,49 +162,41 @@ export class AppComponent implements OnInit {
       case AppSettings.EDUCATIONS:
         if (this.educations[this.pageNumber] && this.educations[this.pageNumber].length > 0) {
           this.educations[this.pageNumber + 1] = [];
-          this.educations[this.pageNumber + 1].push(this.educations[this.pageNumber].pop());
         }
       break;
       case AppSettings.KNOWLEDGES:
         if (this.knowledges[this.pageNumber] && this.knowledges[this.pageNumber].length > 0) {
           this.knowledges[this.pageNumber + 1] = [];
-          this.knowledges[this.pageNumber + 1].push(this.knowledges[this.pageNumber].pop());
         }
       break;
       case AppSettings.CMS:
         if (this.cms[this.pageNumber] && this.cms[this.pageNumber].length > 0) {
           this.cms[this.pageNumber + 1] = [];
-          this.cms[this.pageNumber + 1].push(this.cms[this.pageNumber].pop());
         }
       break;
       case AppSettings.LANGUAGES:
         if (this.languages[this.pageNumber] && this.languages[this.pageNumber].length > 0) {
           this.languages[this.pageNumber + 1] = [];
-          this.languages[this.pageNumber + 1].push(this.languages[this.pageNumber].pop());
         }
       break;
       case AppSettings.SKILLandCOMPETENCES:
         if (this.skillsAndCompetences[this.pageNumber] && this.skillsAndCompetences[this.pageNumber].length > 0) {
           this.skillsAndCompetences[this.pageNumber + 1] = [];
-          this.skillsAndCompetences[this.pageNumber + 1].push(this.skillsAndCompetences[this.pageNumber].pop());
         }
       break;
       case AppSettings.INTERESTSandHOBBIES:
         if (this.interestsAndHobbies[this.pageNumber] && this.interestsAndHobbies[this.pageNumber].length > 0) {
           this.interestsAndHobbies[this.pageNumber + 1] = [];
-          this.interestsAndHobbies[this.pageNumber + 1].push(this.interestsAndHobbies[this.pageNumber].pop());
         }
       break;
       case AppSettings.PORTFOLIO:
         if (this.portfolio[this.pageNumber] && this.portfolio[this.pageNumber].length > 0) {
           this.portfolio[this.pageNumber + 1] = [];
-          this.portfolio[this.pageNumber + 1].push(this.portfolio[this.pageNumber].pop());
         }
       break;
       case AppSettings.CONTACTS:
         if (this.contacts[this.pageNumber] && this.contacts[this.pageNumber].length > 0) {
           this.contacts[this.pageNumber + 1] = [];
-          this.contacts[this.pageNumber + 1].push(this.contacts[this.pageNumber].pop());
         }
       break;
       default:
