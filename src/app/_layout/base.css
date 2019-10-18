@@ -1310,3 +1310,16 @@ textarea {
 .social a {
 	padding-right: 20%;
 }
+
+#logo {
+	background-image: url('./../../assets/images/logo-aorlando.png');
+	width: 215px;
+    height: 171px;
+	float: right;
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: 999;
+	right:0px;
+	bottom:0px;
+	opacity: 0.04;
+}
