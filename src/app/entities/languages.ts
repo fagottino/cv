@@ -1,4 +1,4 @@
-import { Knowledges } from "./knowledges";
+import { Knowledges } from './knowledges';
 
 export class Languages extends Knowledges {
 }

@@ -17,7 +17,7 @@ export class KnowledgeComponent implements OnInit, AfterViewChecked {
 
   ngOnInit() {
   }
-  
+
   ngAfterViewChecked(): void {
     if (document.getElementById('con' + this.pageNumber)) {
       if (document.getElementById('con' + this.pageNumber).clientHeight > AppSettings.DIV_HEIGTH) {

@@ -82,20 +82,24 @@ export class AppComponent implements OnInit {
     for (let i = 0; i <= this.cv.knowledges.length; i++) {
       !this.knowledges[this.pageNumber] ? this.knowledges[this.pageNumber] = [] : null;
       for (let k = 0; k < 3; k++) {
-        if (this.cv.knowledges[0])
+        if (this.cv.knowledges[0]) {
           this.knowledges[this.pageNumber].push(this.cv.knowledges.shift());
+        }
       }
+      i = 0;
       this.ref.detectChanges();
     }
   }
 
   setCms(): void {
     this.activeSection = AppSettings.CMS;
-    this.cv.cms.forEach(c => {
-      !this.cms[this.pageNumber] ? this.cms[this.pageNumber] = [] : null;
-      this.cms[this.pageNumber].push(c);
-      this.ref.detectChanges();
-    });
+    if (this.cv.cms) {
+      this.cv.cms.forEach(c => {
+        !this.cms[this.pageNumber] ? this.cms[this.pageNumber] = [] : null;
+        this.cms[this.pageNumber].push(c);
+        this.ref.detectChanges();
+      });
+    }
   }
 
   setLanguages(): void {

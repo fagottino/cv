@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import {  OnInit, AfterViewChecked, Component, Input } from '@angular/core';
 import { KnowledgeComponent } from '../knowledge/knowledge.component';
 import { Languages } from 'src/app/entities/languages';
 
@@ -7,7 +7,7 @@ import { Languages } from 'src/app/entities/languages';
   templateUrl: './language.component.html',
   styleUrls: ['./language.component.css', '../../app.component.css']
 })
-export class LanguageComponent extends KnowledgeComponent {
+export class LanguageComponent extends KnowledgeComponent implements OnInit, AfterViewChecked {
 
   @Input() languages: Languages[];
 
