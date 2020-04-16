@@ -6,13 +6,11 @@
       <div class="row">
           <div class="span3 skill" *ngFor="let language of languages">
               <h4>
-                  {{language?.title}}
+                  <strong>{{language?.title}}</strong>
               </h4>
-              <div class="level">
-                  <span class="l-{{language?.level}}">
-                      good skillset
+                  <span style="display: flex; justify-content: center;">
+                      {{language?.level}}
                   </span>
-              </div>
           </div>
       </div>
   </div>

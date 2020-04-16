@@ -1,5 +1,5 @@
 export class AppSettings {
-    public static DIV_HEIGTH: number = 1050;
+    public static DIV_HEIGTH: number = 1030;
     public static WORK_EXPERIENCES: string = "workExperiences";
     public static EDUCATIONS: string = "educations";
     public static KNOWLEDGES: string = "knowledges";

@@ -1,4 +1,6 @@
 import { Knowledges } from './knowledges';
 
-export class Languages extends Knowledges {
+export class Languages {
+    title: string;
+    level: string;
 }

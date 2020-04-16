@@ -41,11 +41,18 @@
   ],
   "workExperiences": [
     {
+      "company": "Democom",
+      "city": "Campobasso (CB)",
+      "dateFromTo": "03/2020 - Attuale",
+      "title": "Developer",
+      "description": "Sviluppo di App per la visualizzazione di dati provenienti da sensori di aria e terra;\nSviluppo di PWA;\nInstallazione e configurazione di e-commerce basato su Prestashop;\nManutenzione e sviluppo di servizi su applicativi già esistenti"
+    },
+    {
       "company": "Engineering / Banca Intesa San Paolo",
       "city": "Moncalieri (TO)",
       "dateFromTo": "02/2019 - 04/2019",
       "title": "Developer",
-      "description": "AM sulle funzionalità del progetto 'Visage' Nuova Anagrafe attualmente in uso presso il gruppo 'Intesa Sanpaolo';\nGestione e lavorazione ticket;\nUtilizzo degli strumenti Change Console, RTC (Relational Team Concert), Ticket Web e SOAP UI;\nInterrogazione su DB2 tramite applicativi basati su COBOL\nSviluppo e manutenzione di WS Rest\nSupporto attivo alla fase di test"
+      "description": "AM sulle funzionalità del progetto 'Visage' Nuova Anagrafe attualmente in uso presso il gruppo 'Intesa Sanpaolo';\nGestione e lavorazione ticket;\nUtilizzo degli strumenti Change Console, RTC (Relational Team Concert), Ticket Web e SOAP UI;\nInterrogazione su DB2 tramite applicativi basati su COBOL\nSviluppo e manutenzione di WS Rest;\nSupporto attivo alla fase di test"
     },
     {
       "company": "Xeos.",
@@ -122,6 +129,14 @@
   ],
   "knowledges": [
     {
+      "title": "Flutter",
+      "icon": "flutter"
+    },
+    {
+      "title": "Dart",
+      "icon": "dart"
+    },
+    {
       "title": "JAVA 8",
       "icon": "java8"
     },
@@ -190,18 +205,6 @@
       "icon": "tomcat"
     },
     {
-      "title": "IntelliJ",
-      "icon": "intellij"
-    },
-    {
-      "title": "Eclipse",
-      "icon": "eclipse"
-    },
-    {
-      "title": "Visual Studio Code",
-      "icon": "vsc"
-    },
-    {
       "title": "JUnit",
       "icon": "junit"
     },
@@ -227,11 +230,11 @@
   "languages": [
     {
       "title": "Italiano",
-      "level": 10
+      "level": "Madrelingua"
     },
     {
       "title": "Inglese",
-      "level": 7
+      "level": "B2"
     }
   ],
   "skillsAndCompetences": [
