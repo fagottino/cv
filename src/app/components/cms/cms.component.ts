@@ -1,7 +1,6 @@
 import { OnInit, AfterViewChecked, Component, Input, Output, EventEmitter } from '@angular/core';
 import { Cms } from 'src/app/entities/cms';
 import { KnowledgeComponent } from '../knowledge/knowledge.component';
-import { AppSettings } from 'dist/cv/assets/app-settings';
 
 @Component({
   selector: 'app-cms',
