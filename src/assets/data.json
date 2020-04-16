@@ -41,11 +41,18 @@
   ],
   "workExperiences": [
     {
+      "company": "Democom",
+      "city": "Campobasso (CB)",
+      "dateFromTo": "03/2020 - Attuale",
+      "title": "Developer",
+      "description": "Sviluppo di App per la visualizzazione di dati provenienti da sensori di aria e terra;\nSviluppo di PWA;\nInstallazione e configurazione di e-commerce basato su Prestashop;\nManutenzione e sviluppo di servizi su applicativi già esistenti"
+    },
+    {
       "company": "Engineering / Banca Intesa San Paolo",
       "city": "Moncalieri (TO)",
       "dateFromTo": "02/2019 - 04/2019",
       "title": "Developer",
-      "description": "AM sulle funzionalità del progetto 'Visage' Nuova Anagrafe attualmente in uso presso il gruppo 'Intesa Sanpaolo';\nGestione e lavorazione ticket;\nUtilizzo degli strumenti Change Console, RTC (Relational Team Concert), Ticket Web e SOAP UI;\nInterrogazione su DB2 tramite applicativi basati su COBOL\nSviluppo e manutenzione di WS Rest\nSupporto attivo alla fase di test"
+      "description": "AM sulle funzionalità del progetto 'Visage' Nuova Anagrafe attualmente in uso presso il gruppo 'Intesa Sanpaolo';\nGestione e lavorazione ticket;\nUtilizzo degli strumenti Change Console, RTC (Relational Team Concert), Ticket Web e SOAP UI;\nInterrogazione su DB2 tramite applicativi basati su COBOL\nSviluppo e manutenzione di WS Rest;\nSupporto attivo alla fase di test"
     },
     {
       "company": "Xeos.",
@@ -122,87 +129,127 @@
   ],
   "knowledges": [
     {
-      "title": "JAVA",
-      "level": 8
+      "title": "Flutter",
+      "icon": "flutter"
+    },
+    {
+      "title": "Dart",
+      "icon": "dart"
+    },
+    {
+      "title": "Docker",
+      "icon": "docker"
+    },
+    {
+      "title": "JAVA 8",
+      "icon": "java8"
     },
     {
       "title": "Spring",
-      "level": 8
+      "icon": "spring"
     },
     {
       "title": "Hibernate",
-      "level": 8
-    },
-    {
-      "title": "SQL",
-      "level": 9
+      "icon": "hibernate"
     },
     {
       "title": "Android",
-      "level": 6
+      "icon": "android"
     },
     {
       "title": "C#",
-      "level": 7
+      "icon": "cSharp"
     },
     {
       "title": "C",
-      "level": 5
+      "icon": "c"
     },
     {
       "title": "AngularJS",
-      "level": 8
+      "icon": "angularjs"
     },
     {
-      "title": "Angular2",
-      "level": 8
+      "title": "Angular 2",
+      "icon": "angular2"
     },
     {
-      "title": "JS/TS",
-      "level": 8
+      "title": "JS",
+      "icon": "js"
+    },
+    {
+      "title": "TS",
+      "icon": "ts"
     },
     {
       "title": "PHP",
-      "level": 9
+      "icon": "php"
     },
     {
-      "title": "HTML/CSS",
-      "level": 9
+      "title": "Rational Team Concert",
+      "icon": "rtc"
+    },
+    {
+      "title": "Github",
+      "icon": "github"
+    },
+    {
+      "title": "Oracle",
+      "icon": "oracle"
+    },
+    {
+      "title": "MongoDB",
+      "icon": "mongodb"
+    },
+    {
+      "title": "MySQL",
+      "icon": "mysql"
+    },
+    {
+      "title": "Tomcat",
+      "icon": "tomcat"
+    },
+    {
+      "title": "JUnit",
+      "icon": "junit"
     },
     {
       "title": "Fireworks",
-      "level": 10
+      "icon": "fireworks"
+    },
+    {
+      "title": "Pinnacle",
+      "icon": "pinnacle"
     }
   ],
   "cms": [
     {
       "title": "Prestashop",
-      "level": 8
+      "icon": "8"
     },
     {
       "title": "Wordpress",
-      "level": 9
+      "icon": "9"
     }
   ],
   "languages": [
     {
       "title": "Italiano",
-      "level": 10
+      "level": "Madrelingua"
     },
     {
       "title": "Inglese",
-      "level": 7
+      "level": "B2"
     }
   ],
   "skillsAndCompetences": [
     {
       "title": "Relazionali/Organizzative",
-      "description": "Buona conoscenza degli ambienti lavorativi sia statici (uffici) che dinamici (remote working/consulting)\nCapacità di adattamento, relazionali e al lavoro in team. Creatività e dinamismo.\nBuona capacità organizzativa di progetti e lavori, autonomi e non."
+      "description": "Mi relaziono bene con gli altri e con la natura. Mi ritengo allegro, capace di lavorare e creare un buon ambiente sereno in un team di sviluppo. Propenso a conoscere gente nuova, preferibilmente di diverse culture.\nHo lavorato in ambienti sia statici (uffici) che dinamici (remote working/consulting). Schematizzo i grandi problemi cosi da poterli suddividere in piccoli problemi risolvibili. Buona capacità organizzativa, autonoma e non."
 
     },
     {
       "title": "Tecniche",
-      "description": "Ottima predisposizione all'uso del PC. Nei primi tempi da autodidatta ho acquisito esperienza dei vari programmi ed ambienti per lo sviluppo di Web/SW application."
+      "description": "Ottima predisposizione all'uso del PC. Nei primi tempi da autodidatta ho acquisito esperienza dei vari programmi ed ambienti per lo sviluppo di Web/SW application. Con l'ingresso nel mondo del lavoro ho potuto amplire tantissimo le mie conoscenze arrivando a lavorare in ambito biomedicale per la creazione di Plantari e in ambito Bancario."
     }
   ],
   "interestsAndHobbies": [

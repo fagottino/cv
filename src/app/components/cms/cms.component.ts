@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { OnInit, AfterViewChecked, Component, Input, Output, EventEmitter } from '@angular/core';
 import { Cms } from 'src/app/entities/cms';
 import { KnowledgeComponent } from '../knowledge/knowledge.component';
 
@@ -7,7 +7,7 @@ import { KnowledgeComponent } from '../knowledge/knowledge.component';
   templateUrl: './cms.component.html',
   styleUrls: ['./cms.component.css', '../../app.component.css']
 })
-export class CmsComponent extends KnowledgeComponent {
+export class CmsComponent extends KnowledgeComponent implements OnInit, AfterViewChecked {
 
   @Input() cms: Cms[];
 
@@ -17,8 +17,8 @@ export class CmsComponent extends KnowledgeComponent {
 
   ngOnInit() {
   }
-  
-  ngAfterViewChecked(): void {
+
+  AfterViewChecked(): void {
     super.ngAfterViewChecked();
   }
 
