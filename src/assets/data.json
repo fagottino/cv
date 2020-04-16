@@ -137,6 +137,10 @@
       "icon": "dart"
     },
     {
+      "title": "Docker",
+      "icon": "docker"
+    },
+    {
       "title": "JAVA 8",
       "icon": "java8"
     },
